@@ -1,0 +1,123 @@
+# =============================================================================
+# chexlocalize-medical-imaging — .gitignore
+# Goal: NEVER commit datasets, model weights, large prediction masks,
+#       credentials, or environment cruft. Keep the directory skeleton
+#       (via .gitkeep) and small, reproducibility-critical split definitions.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Datasets / raw & processed imaging data (never commit the dataset)
+# -----------------------------------------------------------------------------
+data/raw/**
+data/processed/**
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+# Keep small split-definition files under data/splits/ (reproducibility),
+# but never image blobs that might land there.
+data/splits/**/*.png
+data/splits/**/*.jpg
+data/splits/**/*.jpeg
+data/splits/**/*.npy
+data/splits/**/*.npz
+
+# Common medical-imaging / large binary formats, wherever they appear
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+*.mha
+*.mhd
+*.nrrd
+*.tif
+*.tiff
+*.svs
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.png
+*.jpg
+*.jpeg
+# ...but keep documentation / notebook figures explicitly if needed:
+!docs/**/*.png
+!results/**/*.png
+
+# -----------------------------------------------------------------------------
+# Model checkpoints / weights (never commit)
+# -----------------------------------------------------------------------------
+checkpoints/**
+!checkpoints/.gitkeep
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.pkl
+*.pickle
+
+# -----------------------------------------------------------------------------
+# Prediction masks (can be large) — keep the folder, ignore contents
+# -----------------------------------------------------------------------------
+predictions/**
+!predictions/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Secrets / credentials / API keys / RunPod
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*_secret*
+*secret*.json
+*credentials*
+*.token
+.runpod/
+.runpodignore
+runpod*.json
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# -----------------------------------------------------------------------------
+# Virtual environments
+# -----------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# -----------------------------------------------------------------------------
+# OS / editor cruft
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+
+# -----------------------------------------------------------------------------
+# Temporary files / logs
+# -----------------------------------------------------------------------------
+tmp/
+temp/
+*.tmp
+*.log

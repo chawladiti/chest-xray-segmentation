@@ -1,0 +1,102 @@
+# =============================================================================
+# Central project configuration for chexlocalize-medical-imaging
+# -----------------------------------------------------------------------------
+# NOTE ON PATHS:
+#   * No personal / machine-specific absolute paths are hard-coded here.
+#   * Every path may be overridden with an environment variable using the
+#     ${VAR:-default} syntax understood by the config loader
+#     (configs/loader.py). If VAR is unset, the default after ":-" is used.
+#   * Relative paths are resolved against `project_root` by the loader.
+#   * `project_root` defaults to auto-detection (the repo root that contains
+#     this configs/ directory) when PROJECT_ROOT is not set.
+# =============================================================================
+
+project:
+  name: chexlocalize-medical-imaging
+  description: >-
+    Clean, reproducible computational medical imaging framework built on the
+    CheXlocalize chest X-ray localization/segmentation dataset.
+  # Development mode: "demo" (small sample, fast debugging runs) or
+  # "full" (real experiments). Override with PROJECT_MODE.
+  # DEMO and FULL outputs are kept in separate subdirectories (see `modes`)
+  # so their results are NEVER mixed.
+  mode: ${PROJECT_MODE:-demo}
+
+# -----------------------------------------------------------------------------
+# Configurable paths (all overridable via environment variables).
+# -----------------------------------------------------------------------------
+paths:
+  # Empty default => loader auto-detects the repository root.
+  project_root: ${PROJECT_ROOT:-}
+
+  data_root: ${DATA_ROOT:-data}
+  raw_data_root: ${RAW_DATA_ROOT:-data/raw}
+  processed_data_root: ${PROCESSED_DATA_ROOT:-data/processed}
+  splits_root: ${SPLITS_ROOT:-data/splits}
+
+  results_root: ${RESULTS_ROOT:-results}
+  predictions_root: ${PREDICTIONS_ROOT:-predictions}
+  checkpoints_root: ${CHECKPOINTS_ROOT:-checkpoints}
+
+  configs_root: ${CONFIGS_ROOT:-configs}
+  docs_root: ${DOCS_ROOT:-docs}
+
+# -----------------------------------------------------------------------------
+# Mode-specific output isolation.
+# The loader appends the active mode's subdir to results_root,
+# predictions_root and checkpoints_root so DEMO can never overwrite or be
+# mixed with FULL experiment outputs.
+# -----------------------------------------------------------------------------
+modes:
+  demo:
+    subdir: demo
+  full:
+    subdir: full
+
+# -----------------------------------------------------------------------------
+# Default training settings for TRAINABLE models.
+# (No models are implemented yet; these are the agreed defaults/contract.)
+# -----------------------------------------------------------------------------
+training:
+  max_epochs: 20                 # hard cap on epochs
+  validate_every_epoch: true     # validate after every epoch where possible
+  monitor_metric: val_dice       # metric tracked for checkpointing / stopping
+  monitor_mode: max              # higher validation Dice is better
+  save_best_checkpoint: true     # keep the best checkpoint by monitor_metric
+  save_training_history: true    # persist per-epoch metrics
+  resume_from_checkpoint: null   # path to a checkpoint to resume from, or null
+  early_stopping:
+    enabled: true
+    monitor: val_dice
+    mode: max
+    patience: 5                  # configurable early-stopping patience
+  learning_rate: 0.0001          # configurable learning rate
+  batch_size: 8                  # configurable batch size
+
+# -----------------------------------------------------------------------------
+# Evaluation settings (model-independent).
+# -----------------------------------------------------------------------------
+evaluation:
+  primary_metric: dice
+  metrics:
+    - dice                       # Dice coefficient
+  reporting:
+    dice_percentage: true        # Dice x 100
+    absolute_dice_improvement: true
+    percentage_improvement: true # ((new - baseline) / baseline) x 100
+  # Baseline experiment id used for improvement calculations (set later).
+  baseline: null
+
+# -----------------------------------------------------------------------------
+# Dataset handling policy (enforced later; documented here as the contract).
+# CheXlocalize's official val/test images + annotations are a localization
+# BENCHMARK and must not be used as ordinary training data.
+# -----------------------------------------------------------------------------
+dataset:
+  name: chexlocalize
+  # Intentionally unset until the real dataset structure is inspected.
+  structure_inspected: false
+  policy:
+    do_not_train_on_official_test: true
+    do_not_leak_test_annotations: true
+    do_not_arbitrarily_split_official_test: true
