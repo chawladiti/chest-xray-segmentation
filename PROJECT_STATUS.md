@@ -11,7 +11,7 @@ metrics, or Dice scores are recorded until they are genuinely produced.
 | Component        | Status                |
 | ---------------- | --------------------- |
 | Architecture     | ✅ Initialized         |
-| Dataset          | ⛔ NOT YET SET UP      |
+| Dataset          | 🟡 TOOLING READY — awaiting gated access (SAS URL) |
 | Preprocessing    | ⛔ NOT YET IMPLEMENTED |
 | nnU-Net          | ⛔ NOT YET IMPLEMENTED |
 | SAM 2            | ⛔ NOT YET IMPLEMENTED |
@@ -26,10 +26,16 @@ metrics, or Dice scores are recorded until they are genuinely produced.
   system (`configs/project.yaml` + `configs/loader.py`), `.gitignore`,
   `requirements.txt` (infrastructure only), and a project-validation script are
   in place. No models, datasets, or results yet.
-- **Dataset: NOT YET SET UP** — CheXlocalize is **not** downloaded. Its real
-  structure must be inspected before any split/train/eval strategy is chosen.
-  The official validation/test images + annotations are a localization
-  **benchmark** and must not be treated as ordinary training data.
+- **Dataset: TOOLING READY, awaiting access** — CheXlocalize is GATED. The
+  reproducible downloader (`scripts/download_chexlocalize.sh`), read-only
+  inspector (`scripts/inspect_dataset.py`), and docs (`docs/dataset.md`) are in
+  place. Download is blocked only on the user completing the Stanford AIMI
+  registration/agreement and providing the private SAS URL via `.env`
+  (`CHEXLOCALIZE_SAS_URL`). Nothing is downloaded yet. Its real structure must
+  be inspected before any split/train/eval strategy is chosen. The official
+  validation/test images + annotations are a localization **benchmark** and must
+  not be treated as ordinary training data. **Note: CheXlocalize contains NO
+  dedicated segmentation training set** — see `docs/dataset.md`.
 - **DEMO vs FULL** — Development modes are supported via `PROJECT_MODE`. DEMO
   and FULL outputs are written to separate subdirectories and must never be
   mixed.
