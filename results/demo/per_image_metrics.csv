@@ -1,0 +1,1 @@
+image_id,patient_id,split,pathology,model,training_type,weights_updated,checkpoint,epoch,target_status,dice,dice_percentage,iou,flags

@@ -19,7 +19,7 @@ metrics, or Dice scores are recorded until they are genuinely produced.
 | SAM 2            | ⛔ NOT YET IMPLEMENTED |
 | MedSAM           | ⛔ NOT YET IMPLEMENTED |
 | NVIDIA method    | ⛔ NOT YET IMPLEMENTED |
-| Evaluation       | ⛔ NOT YET IMPLEMENTED |
+| Evaluation       | ✅ FRAMEWORK IMPLEMENTED (Dice/IoU, per-pathology, comparison; 63 tests PASS) |
 | Frontend         | ⛔ NOT YET IMPLEMENTED |
 
 ## Notes

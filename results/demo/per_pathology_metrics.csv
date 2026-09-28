@@ -1,0 +1,1 @@
+model,training_type,split,pathology,num_evaluated,mean_dice,median_dice,std_dice,mean_iou,dice_percentage

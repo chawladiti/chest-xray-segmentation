@@ -1,0 +1,60 @@
+# =============================================================================
+# Model-INDEPENDENT evaluation configuration.
+# Every model (nnU-Net, SAM 2, MedSAM, NVIDIA method) is scored with this same
+# pipeline on the SAME official CheXlocalize test set. This is a 10-pathology
+# MULTI-LABEL problem: each pathology is its own binary channel. There is NO
+# mutually-exclusive multiclass map.
+# =============================================================================
+
+metric:
+  threshold: 0.5           # threshold for probability-map predictions -> binary
+  # BOTH-EMPTY CONVENTION (documented in docs/evaluation.md):
+  # When prediction AND ground truth are both empty (no foreground pixels),
+  # Dice and IoU are defined as 1.0 (perfect agreement / true negative).
+  both_empty_dice: 1.0
+  both_empty_iou: 1.0
+
+target_status:
+  valid_positive: VALID_POSITIVE
+  valid_negative: VALID_NEGATIVE
+  ignore: IGNORE
+  # Statuses excluded from the supervised metric aggregation.
+  exclude_from_aggregation: [IGNORE]
+
+aggregation:
+  overall_key: "__overall__"   # macro-average across the pathologies
+
+# Source of truth for pathologies = the verified CheXlocalize segmentation names
+# (configs/preprocessing.yaml). NOTE: the localized set includes "Support Devices"
+# and does NOT include "Pneumonia" (Pneumonia has no CheXlocalize masks). Change
+# this list only if you deliberately intend a different evaluation target set.
+pathologies:
+  - Airspace Opacity
+  - Atelectasis
+  - Cardiomegaly
+  - Consolidation
+  - Edema
+  - Enlarged Cardiomediastinum
+  - Lung Lesion
+  - Pleural Effusion
+  - Pneumothorax
+  - Support Devices
+
+test_policy:
+  final_comparison_split: test
+  note: >-
+    All final model comparisons use ONLY the official CheXlocalize test set.
+    The official test annotations are never used for training or model selection.
+
+predictions:
+  # Where a model writes its predictions (probability or binary PNG masks):
+  #   predictions_root/<model>/<split>/<image_id>/<Pathology>.png
+  # (predictions_root is mode-isolated: predictions/<demo|full>/...)
+  layout: "{model}/{split}/{image_id}/{pathology}.png"
+
+output:
+  per_image_filename: per_image_metrics.csv
+  per_pathology_filename: per_pathology_metrics.csv
+  model_comparison_csv: model_comparison.csv
+  model_comparison_json: model_comparison.json
+  figures_subdir: figures

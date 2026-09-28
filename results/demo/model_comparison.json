@@ -1,0 +1,16 @@
+{
+  "split": "test",
+  "baseline": {
+    "model": "",
+    "training_type": ""
+  },
+  "candidate": {
+    "model": "",
+    "training_type": ""
+  },
+  "same_evaluation_subset": true,
+  "subset_difference": {},
+  "subset_warning": "",
+  "test_set_policy": "",
+  "comparisons": []
+}
