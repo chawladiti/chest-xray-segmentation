@@ -11,7 +11,7 @@ metrics, or Dice scores are recorded until they are genuinely produced.
 | Component        | Status                |
 | ---------------- | --------------------- |
 | Architecture     | ✅ Initialized         |
-| Dataset          | 🟡 TOOLING READY — awaiting gated access (SAS URL) |
+| Dataset          | ✅ DOWNLOADED & INSPECTED (5.3 GB; val 234 / test 668) |
 | Preprocessing    | ⛔ NOT YET IMPLEMENTED |
 | nnU-Net          | ⛔ NOT YET IMPLEMENTED |
 | SAM 2            | ⛔ NOT YET IMPLEMENTED |
@@ -26,16 +26,17 @@ metrics, or Dice scores are recorded until they are genuinely produced.
   system (`configs/project.yaml` + `configs/loader.py`), `.gitignore`,
   `requirements.txt` (infrastructure only), and a project-validation script are
   in place. No models, datasets, or results yet.
-- **Dataset: TOOLING READY, awaiting access** — CheXlocalize is GATED. The
-  reproducible downloader (`scripts/download_chexlocalize.sh`), read-only
-  inspector (`scripts/inspect_dataset.py`), and docs (`docs/dataset.md`) are in
-  place. Download is blocked only on the user completing the Stanford AIMI
-  registration/agreement and providing the private SAS URL via `.env`
-  (`CHEXLOCALIZE_SAS_URL`). Nothing is downloaded yet. Its real structure must
-  be inspected before any split/train/eval strategy is chosen. The official
-  validation/test images + annotations are a localization **benchmark** and must
-  not be treated as ordinary training data. **Note: CheXlocalize contains NO
-  dedicated segmentation training set** — see `docs/dataset.md`.
+- **Dataset: DOWNLOADED & INSPECTED (2026-09-28)** — CheXlocalize pulled into
+  `data/raw/chexlocalize/` (5.3 GB, 3,256 files, 0 failed) via
+  `scripts/download_chexlocalize.sh`, and verified read-only with
+  `scripts/inspect_dataset.py`. Confirmed: val = 234 images / 200 patients,
+  test = 668 images / 500 patients. GT masks cover 187/234 val and 499/668 test
+  studies (not every image has a mask). Naming caveat: CSV "Lung Opacity" ==
+  JSON "Airspace Opacity". Full details + nuances in `docs/dataset.md`.
+  **Still NO training split created** — the official test set is the localization
+  **benchmark** and must not be trained on. **CheXlocalize contains NO dedicated
+  segmentation training set**; train/eval strategy is the next decision.
+  (Dataset files are git-ignored and never committed.)
 - **DEMO vs FULL** — Development modes are supported via `PROJECT_MODE`. DEMO
   and FULL outputs are written to separate subdirectories and must never be
   mixed.

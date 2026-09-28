@@ -37,28 +37,52 @@ by you; they cannot be automated.**
    python scripts/inspect_dataset.py
    ```
 
-## Expected structure (per the official repo)
+## Actual structure (VERIFIED on 2026-09-28 via `scripts/inspect_dataset.py`)
 
-> Confirm against `scripts/inspect_dataset.py` after download — do not assume.
+Downloaded size: **5.3 GB**, 3,256 files, 0 failed. Note the archive unpacks
+under an extra lowercase `chexlocalize/` top-level folder:
 
 ```
-data/raw/
+data/raw/chexlocalize/
 ├── CheXpert/
-│   ├── val/                 # CheXpert VALIDATION CXR images (234 imgs, 200 patients)
-│   ├── val_labels.csv       # validation ground-truth image-level labels
-│   ├── test/                # CheXpert TEST CXR images (668 imgs, 500 patients)
-│   └── test_labels.csv      # test ground-truth image-level labels
+│   ├── val/                 # 234 CXR images, 200 patients  (patient*/study*/view*.jpg)
+│   ├── val_labels.csv       # 234 rows; image-level labels (14 CheXpert classes)
+│   ├── test/                # 668 CXR images, 500 patients
+│   └── test_labels.csv      # 668 rows; image-level labels
 └── CheXlocalize/
-    ├── gradcam_maps_val/               # val DenseNet121 + Grad-CAM heatmaps
-    ├── gradcam_segmentations_val.json  # val Grad-CAM pixel-level segmentations
-    ├── gt_annotations_val.json         # val ground-truth RAW radiologist annotations
-    ├── gt_annotations_test.json        # test ground-truth RAW radiologist annotations
-    ├── gt_segmentations_val.json       # val ground-truth PIXEL segmentations
-    ├── gt_segmentations_test.json      # test ground-truth PIXEL segmentations
-    ├── hb_annotations_test.json        # test HUMAN-BENCHMARK raw annotations
-    ├── hb_salient_pt_test.json         # test human-benchmark most-salient points
-    └── hb_segmentations_test.json      # test human-benchmark pixel segmentations
+    ├── chexlocalize_tasks.json         # task list (key: 'chexplanation_tasks')
+    ├── gradcam_maps_val/               # 2,340 .pkl DenseNet121+Grad-CAM heatmaps (val)
+    ├── gradcam_segmentations_val.json  # 234 studies — Grad-CAM pixel segmentations (val)
+    ├── gt_annotations_val.json         # 187 studies — RAW radiologist annotations (val)
+    ├── gt_annotations_test.json        # 668 studies — RAW radiologist annotations (test)
+    ├── gt_segmentations_val.json       # 187 studies — GT PIXEL segmentations (val)
+    ├── gt_segmentations_test.json      # 499 studies — GT PIXEL segmentations (test)
+    ├── hb_annotations_test.json        # 502 studies — HUMAN-BENCHMARK raw annotations
+    ├── hb_salient_pt_test.json         # 503 studies — human-benchmark salient points
+    └── hb_segmentations_test.json      # 502 studies — human-benchmark pixel segmentations
 ```
+
+### Verified facts & non-obvious nuances (these matter downstream)
+
+- **Counts confirmed:** val = 234 images / 200 patients; test = 668 images /
+  500 patients. Images are JPG under `patient*/study*/view*_frontal|lateral.jpg`.
+- **Not every image has a mask.** GT segmentations exist for **187 / 234** val
+  studies and **499 / 668** test studies — images with no positive localizable
+  pathology simply have no segmentation entry. Do **not** assume 1 mask per image.
+- **Pathology-name mismatch to reconcile in preprocessing:** the CSV labels use
+  **"Lung Opacity"**, but the segmentation/annotation JSONs use
+  **"Airspace Opacity"** for the same class. The 10 localized pathologies are:
+  Enlarged Cardiomediastinum, Cardiomegaly, Lung Lesion, Airspace Opacity
+  (= Lung Opacity), Edema, Consolidation, Atelectasis, Pneumothorax,
+  Pleural Effusion, Support Devices. (CheXpert also has Pneumonia / No Finding,
+  which are **not** localized.)
+- **Two JSON representations per split:** `gt_annotations_*` = raw radiologist
+  polygons plus `img_size`; `gt_segmentations_*` = encoded pixel-level masks.
+  The exact mask encoding will be handled in preprocessing (not yet touched).
+- **Grad-CAM** heatmaps (`.pkl`) and Grad-CAM segmentations are provided for the
+  **val** split only — these are the saliency-method outputs from the paper.
+- **Human benchmark (`hb_*`)** exists for **test only** — the radiologist
+  reference used to compare *models* against; never a training target.
 
 ## ⚠️ Critical methodological / data-leakage notes
 
@@ -87,5 +111,6 @@ These constraints shape every downstream decision:
    updated on training data; zero-shot/pretrained inference is never called
    fine-tuning.
 
-The concrete train/eval strategy will be chosen **after** `inspect_dataset.py`
-confirms the real on-disk structure.
+The concrete train/eval strategy will be chosen next, now that
+`inspect_dataset.py` has confirmed the real on-disk structure (see verified
+facts above). Nothing has been split, moved, or trained.
