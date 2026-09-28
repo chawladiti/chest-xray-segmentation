@@ -8,21 +8,28 @@ is **no** mutually-exclusive multiclass label map.
 Code: `evaluation/{dice,iou,metrics,evaluate,aggregate_results,compare_models}.py`.
 Config: [`configs/evaluation.yaml`](../configs/evaluation.yaml).
 
-## Pathology set (note)
+## Pathology set (canonical — confirmed)
 
-The evaluated pathologies come from `configs/evaluation.yaml` and match the
-verified CheXlocalize segmentation names:
+The 10 evaluated tasks are the official CheXlocalize localization/segmentation
+tasks, in this canonical order (identical in `configs/preprocessing.yaml` and
+`configs/evaluation.yaml`; enforced by `tests/test_pathology_consistency.py`):
 
-Airspace Opacity · Atelectasis · Cardiomegaly · Consolidation · Edema ·
-Enlarged Cardiomediastinum · Lung Lesion · Pleural Effusion · Pneumothorax ·
-**Support Devices**
+1. Atelectasis
+2. Cardiomegaly
+3. Consolidation
+4. Edema
+5. Enlarged Cardiomediastinum
+6. Lung Lesion
+7. **Airspace Opacity** (canonical segmentation name; CheXpert CSV alias = "Lung Opacity")
+8. Pleural Effusion
+9. Pneumothorax
+10. **Support Devices**
 
-> ⚠️ The localized CheXlocalize set includes **Support Devices** and does **not**
-> include **Pneumonia** (Pneumonia is a CheXpert label column with no
-> segmentation masks). Evaluating "Pneumonia" would yield an empty channel and
-> drop the 421 Support Devices masks. If Pneumonia is genuinely intended, change
-> the `pathologies` list in `configs/evaluation.yaml` — it is the single source
-> of truth.
+> **Confirmed decision:** **Support Devices** is one of the 10 tasks and is kept.
+> **Pneumonia is NOT** a CheXlocalize localization task (it has no segmentation
+> masks) and is intentionally excluded. "Airspace Opacity" remains the canonical
+> name; "Lung Opacity" is used **only** as the CheXpert CSV alias. No files,
+> masks, or manifest values are renamed.
 
 ## Dice
 

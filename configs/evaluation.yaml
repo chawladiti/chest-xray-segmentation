@@ -29,13 +29,13 @@ aggregation:
 # and does NOT include "Pneumonia" (Pneumonia has no CheXlocalize masks). Change
 # this list only if you deliberately intend a different evaluation target set.
 pathologies:
-  - Airspace Opacity
   - Atelectasis
   - Cardiomegaly
   - Consolidation
   - Edema
   - Enlarged Cardiomediastinum
   - Lung Lesion
+  - Airspace Opacity
   - Pleural Effusion
   - Pneumothorax
   - Support Devices

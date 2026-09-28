@@ -20,16 +20,19 @@ dataset:
 
 # The 10 localized pathologies EXACTLY as they appear in the GT segmentation
 # JSON and in chexlocalize_tasks.json (the source of truth for segmentation).
+# Canonical CheXlocalize task order (single source of truth; verified by
+# tests/test_pathology_consistency.py). Support Devices IS a task; Pneumonia is
+# NOT. "Airspace Opacity" is the canonical segmentation name.
 pathologies:
-  - Enlarged Cardiomediastinum
+  - Atelectasis
   - Cardiomegaly
+  - Consolidation
+  - Edema
+  - Enlarged Cardiomediastinum
   - Lung Lesion
   - Airspace Opacity
-  - Edema
-  - Consolidation
-  - Atelectasis
-  - Pneumothorax
   - Pleural Effusion
+  - Pneumothorax
   - Support Devices
 
 # NAMING RECONCILIATION (do NOT silently rename anything):
