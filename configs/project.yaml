@@ -88,6 +88,19 @@ evaluation:
   baseline: null
 
 # -----------------------------------------------------------------------------
+# Experimental split policy.
+# The official CheXlocalize TEST set is the untouched benchmark (test.csv).
+# The official VALIDATION set is the development pool, split at the PATIENT level
+# into train / internal_val. Reproducible via a fixed seed.
+# -----------------------------------------------------------------------------
+split:
+  seed: 42                 # fixed for reproducibility
+  dev_pool: val            # official validation set == development pool
+  benchmark: test          # official test set == untouched benchmark
+  level: patient           # split granularity (never image-level)
+  train_fraction: 0.8      # ~80/20 train / internal_val (by images, patient-grouped)
+
+# -----------------------------------------------------------------------------
 # Dataset handling policy (enforced later; documented here as the contract).
 # CheXlocalize's official val/test images + annotations are a localization
 # BENCHMARK and must not be used as ordinary training data.

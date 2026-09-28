@@ -13,6 +13,7 @@ metrics, or Dice scores are recorded until they are genuinely produced.
 | Architecture     | ✅ Initialized         |
 | Dataset          | ✅ DOWNLOADED & INSPECTED (5.3 GB; val 234 / test 668) |
 | Preprocessing    | ✅ IMPLEMENTED (GT masks decoded; manifest + validation PASS) |
+| Experimental split | ✅ CREATED (patient-level dev split; official test untouched; checks PASS) |
 | nnU-Net          | ⛔ NOT YET IMPLEMENTED |
 | SAM 2            | ⛔ NOT YET IMPLEMENTED |
 | MedSAM           | ⛔ NOT YET IMPLEMENTED |

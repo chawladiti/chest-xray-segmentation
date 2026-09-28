@@ -1,0 +1,99 @@
+{
+  "seed": 42,
+  "level": "patient",
+  "train_fraction_target": 0.8,
+  "procedure": "Official TEST set (668 imgs / 500 patients) copied verbatim to test.csv. Official VALIDATION set (234 imgs / 200 patients) grouped by patient; patients shuffled with seed=42; patients added to train until cumulative train images reach round(train_fraction*234), remainder to internal_val. Split is patient-disjoint by construction.",
+  "splits": {
+    "train": {
+      "patients": 161,
+      "images": 187,
+      "positive_images": 145,
+      "negative_images": 42,
+      "rows": 1870
+    },
+    "internal_val": {
+      "patients": 39,
+      "images": 47,
+      "positive_images": 42,
+      "negative_images": 5,
+      "rows": 470
+    },
+    "test": {
+      "patients": 500,
+      "images": 668,
+      "positive_images": 499,
+      "negative_images": 169,
+      "rows": 6680,
+      "note": "Official CheXlocalize benchmark \u2014 untouched."
+    }
+  },
+  "dev_pool_total_images": 234,
+  "actual_train_image_fraction": 0.7991,
+  "negative_label_cross_check": {
+    "train_pairs_neg_mask_but_label_positive": 0,
+    "internal_val_pairs_neg_mask_but_label_positive": 1,
+    "test_pairs_neg_mask_but_label_positive": 6,
+    "conflict_pairs": {
+      "train": [],
+      "internal_val": [
+        {
+          "image_id": "patient64612_study1_view1_frontal",
+          "pathology": "Airspace Opacity"
+        }
+      ],
+      "test": [
+        {
+          "image_id": "patient65075_study1_view1_frontal",
+          "pathology": "Edema"
+        },
+        {
+          "image_id": "patient65086_study1_view1_frontal",
+          "pathology": "Enlarged Cardiomediastinum"
+        },
+        {
+          "image_id": "patient65086_study1_view1_frontal",
+          "pathology": "Airspace Opacity"
+        },
+        {
+          "image_id": "patient65086_study1_view1_frontal",
+          "pathology": "Edema"
+        },
+        {
+          "image_id": "patient65086_study1_view1_frontal",
+          "pathology": "Atelectasis"
+        },
+        {
+          "image_id": "patient65086_study1_view1_frontal",
+          "pathology": "Support Devices"
+        }
+      ]
+    },
+    "note": "Expected to be > 0: CheXlocalize only provides pixel masks where radiologists localized a finding; a positive image-level CheXpert label does not guarantee a segmentation. Informational, not a failure."
+  },
+  "pathologies_canonical": [
+    "Enlarged Cardiomediastinum",
+    "Cardiomegaly",
+    "Lung Lesion",
+    "Airspace Opacity",
+    "Edema",
+    "Consolidation",
+    "Atelectasis",
+    "Pneumothorax",
+    "Pleural Effusion",
+    "Support Devices"
+  ],
+  "pathology_csv_aliases": {
+    "Airspace Opacity": "Lung Opacity"
+  },
+  "checks": {
+    "A_no_patient_overlap_train_ival": true,
+    "B_no_test_image_in_train": true,
+    "C_no_test_image_in_ival": true,
+    "D_all_images_exist": true,
+    "E_masks_present_or_correctly_empty": true,
+    "F_airspace_opacity_canonical": true,
+    "G_lung_opacity_only_alias": true
+  },
+  "patient_overlap_train_ival": [],
+  "PASS": true
+}
