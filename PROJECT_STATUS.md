@@ -14,6 +14,7 @@ metrics, or Dice scores are recorded until they are genuinely produced.
 | Dataset          | ✅ DOWNLOADED & INSPECTED (5.3 GB; val 234 / test 668) |
 | Preprocessing    | ✅ IMPLEMENTED (GT masks decoded; manifest + validation PASS) |
 | Experimental split | ✅ CREATED (patient-level dev split; official test untouched; checks PASS) |
+| Training targets | ✅ BUILT (VALID_POSITIVE 643 / VALID_NEGATIVE 1696 / IGNORE 1; multi-label; checks PASS) |
 | nnU-Net          | ⛔ NOT YET IMPLEMENTED |
 | SAM 2            | ⛔ NOT YET IMPLEMENTED |
 | MedSAM           | ⛔ NOT YET IMPLEMENTED |

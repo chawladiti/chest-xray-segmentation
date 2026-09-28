@@ -1,0 +1,58 @@
+# =============================================================================
+# Segmentation TRAINING TARGET configuration.
+# Defines how each (image, pathology) pair becomes a training target:
+#   VALID_POSITIVE | VALID_NEGATIVE | IGNORE
+# Training targets are built ONLY from the development pool (train + internal_val
+# = the official CheXlocalize validation set). The official TEST set is the
+# benchmark and NEVER receives training targets.
+# =============================================================================
+
+input:
+  # Split CSVs produced by scripts/build_splits.py (relative to splits_root).
+  split_csvs:
+    train: train.csv
+    internal_val: internal_val.csv
+  # The official test set is intentionally excluded from training targets.
+  exclude_splits: [test]
+
+# -----------------------------------------------------------------------------
+# CheXpert label policy. Verified in the dev pool: the 10 localizable columns
+# contain ONLY "0.0" and "1.0" (no blanks, no "-1" uncertain). The uncertain /
+# blank rules below are for robustness/portability and never trigger on val.
+# -----------------------------------------------------------------------------
+label_policy:
+  positive_values: ["1", "1.0"]
+  negative_values: ["0", "0.0"]
+  uncertain_values: ["-1", "-1.0"]
+  # Conservative: anything not a CONFIRMED negative and not localized is IGNORE.
+  # We NEVER fabricate an all-zero (negative) mask for a non-confirmed-negative.
+  uncertain_status: IGNORE
+  blank_status: IGNORE
+
+# -----------------------------------------------------------------------------
+# Target-status decision rules (applied in order):
+#   1. a non-empty decoded CheXlocalize mask exists           -> VALID_POSITIVE
+#   2. else CheXpert label is a confirmed negative            -> VALID_NEGATIVE
+#   3. else CheXpert label is positive (but not localized)    -> IGNORE
+#   4. else (uncertain / blank)                               -> IGNORE
+# -----------------------------------------------------------------------------
+statuses:
+  valid_positive: VALID_POSITIVE
+  valid_negative: VALID_NEGATIVE
+  ignore: IGNORE
+
+output:
+  targets_subdir: targets                 # under processed_root
+  manifest_filename: training_targets.csv # under manifests_subdir
+  overlap_report_filename: mask_overlap.json
+  validation_report_filename: training_target_validation.json
+  mask_format: png
+  binary_values: [0, 255]
+  save_negative_zero_masks: true          # write explicit all-zero masks for VALID_NEGATIVE
+  # IGNORE pairs get NO mask file (must not become a false negative).
+
+overlap_analysis:
+  # Scope for the spatial-overlap study that informs target representation.
+  # "all_positive" = every image with >=1 non-empty mask across val + test.
+  scope: all_positive
+  iou_example_count: 8

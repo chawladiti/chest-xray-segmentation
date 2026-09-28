@@ -69,6 +69,13 @@ def load_preprocessing_context(prep_yaml: "str | None" = None) -> PreprocessingC
     )
 
 
+def load_targets_config(targets_yaml: "str | None" = None) -> Dict[str, Any]:
+    """Load configs/targets.yaml."""
+    path = Path(targets_yaml) if targets_yaml else (PROJECT_ROOT / "configs" / "targets.yaml")
+    with open(path, "r", encoding="utf-8") as fh:
+        return yaml.safe_load(fh)
+
+
 def parse_cxr_id(image_id: str) -> tuple[str, str, str]:
     """'patient64622_study1_view1_frontal' -> ('patient64622','study1','view1_frontal')."""
     parts = image_id.split("_")
