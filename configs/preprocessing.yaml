@@ -1,0 +1,66 @@
+# =============================================================================
+# CheXlocalize preprocessing configuration.
+# Converts the official GT segmentation JSON (COCO-RLE) into usable masks.
+# Base paths (raw_data_root, processed_data_root) come from configs/project.yaml.
+# The original JSONs and images are treated as READ-ONLY inputs.
+# =============================================================================
+
+dataset:
+  # Verified on-disk layout: raw_data_root/<root_subdir>/{CheXpert,CheXlocalize}
+  root_subdir: chexlocalize
+  splits:
+    val:
+      images_subdir: CheXpert/val
+      gt_segmentations: CheXlocalize/gt_segmentations_val.json
+      labels_csv: CheXpert/val_labels.csv
+    test:
+      images_subdir: CheXpert/test
+      gt_segmentations: CheXlocalize/gt_segmentations_test.json
+      labels_csv: CheXpert/test_labels.csv
+
+# The 10 localized pathologies EXACTLY as they appear in the GT segmentation
+# JSON and in chexlocalize_tasks.json (the source of truth for segmentation).
+pathologies:
+  - Enlarged Cardiomediastinum
+  - Cardiomegaly
+  - Lung Lesion
+  - Airspace Opacity
+  - Edema
+  - Consolidation
+  - Atelectasis
+  - Pneumothorax
+  - Pleural Effusion
+  - Support Devices
+
+# NAMING RECONCILIATION (do NOT silently rename anything):
+#   * gt_segmentations_*.json / gt_annotations_*.json / chexlocalize_tasks.json
+#     use "Airspace Opacity".
+#   * CheXpert val_labels.csv / test_labels.csv use "Lung Opacity" for the SAME
+#     clinical class (CheXpert historically named it "Airspace Opacity", later
+#     renamed "Lung Opacity" in the public labeler).
+# We keep the SEGMENTATION name ("Airspace Opacity") as canonical for masks and
+# record the CSV alias below. See docs/preprocessing.md.
+pathology_csv_aliases:
+  Airspace Opacity: Lung Opacity
+
+output:
+  mask_format: png            # "png" (uint8 0/255) or "npy" (uint8 0/1)
+  save_empty_masks: false     # empty (all-zero) masks are recorded but not written
+  copy_images: false          # if true, copy raw CXRs into processed/images/
+  binary_mask_values: [0, 255]
+  # File names (relative to processed_data_root):
+  masks_subdir: masks
+  images_subdir: images
+  manifests_subdir: manifests
+  visualizations_subdir: visualizations
+  manifest_filename: manifest.csv
+  mask_index_filename: _mask_index.csv
+  summary_filename: dataset_summary.json
+  validation_report_filename: validation_report.json
+
+visualization:
+  num_samples: 12             # >= 10 required
+  alpha: 0.4
+  overlay_color: [255, 0, 0]  # RGB for mask overlay
+  max_display_size: 512       # downscale long side for QC figures
+  dpi: 120

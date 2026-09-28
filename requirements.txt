@@ -14,5 +14,10 @@ numpy>=1.24
 # Tabular results I/O (CSV/JSON experiment summaries)
 pandas>=2.0
 
+# Preprocessing: RLE mask decoding, image I/O, QC visualization
+pycocotools>=2.0.6    # decode CheXlocalize COCO-RLE segmentation masks
+Pillow>=10.0          # read CXR JPGs / write PNG masks
+matplotlib>=3.7       # QC sample overlays
+
 # Testing
 pytest>=7.4
