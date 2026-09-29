@@ -104,6 +104,8 @@ ENV/
 .conda/
 # Isolated per-model environments on RunPod (nnunet / sam2 / medsam / core)
 .envs/
+# Local RunPod idle-watchdog log
+.runpod_autostop.log
 
 # -----------------------------------------------------------------------------
 # OS / editor cruft

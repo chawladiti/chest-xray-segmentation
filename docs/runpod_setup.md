@@ -16,16 +16,20 @@ scripts/runpod.sh status     # desiredStatus + uptime + $/hr
 scripts/runpod.sh info       # current ssh root@IP -p PORT -i KEY
 scripts/runpod.sh ssh [cmd]  # shell into the pod (or run a command)
 scripts/runpod.sh deploy     # push git-tracked files -> /workspace/chexlocalize-medical-imaging
-scripts/runpod.sh autostop   # install pod-side idle auto-stop watchdog
+scripts/runpod.sh autostop   # start local idle watchdog in background
+scripts/runpod.sh watch      # run idle watchdog in foreground
 scripts/runpod.sh stop       # stop now (halts GPU billing; keeps /workspace)
 ```
 
-**Automatic turn-OFF:** `scripts/runpod_idle_autostop.sh` runs *on the pod*,
-polls GPU utilization each minute, and calls `runpodctl stop` after
-`RUNPOD_IDLE_MINUTES` (default 30) of the GPU staying below
-`RUNPOD_IDLE_GPU_UTIL_THRESHOLD`% (default 5). This survives the laptop sleeping,
-so an idle A100 stops billing on its own. **Turn-ON is manual/local**
-(`scripts/runpod.sh start`) because a stopped pod cannot start itself.
+**Automatic turn-OFF:** `scripts/runpod_watch_local.sh` runs *on your Mac*, polls
+the pod's GPU utilization over SSH each minute, and calls `runpodctl pod stop`
+after `RUNPOD_IDLE_MINUTES` (default 30) of the GPU staying below
+`RUNPOD_IDLE_GPU_UTIL_THRESHOLD`% (default 5). It runs locally (not on the pod)
+because the pod's minimal container has no cron/systemd/tmux to keep a daemon
+alive, and this keeps the API key off the pod. Log: `.runpod_autostop.log`
+(git-ignored). **Turn-ON is manual/local** (`scripts/runpod.sh start`) because a
+stopped pod cannot start itself. Note: the local watcher requires your Mac to be
+awake and the process running.
 
 Current pod: on-demand **NVIDIA A100 80GB PCIe**, secure cloud, ~$1.59/hr,
 image `runpod/pytorch:2.4.0-py3.11-cuda12.4.1`, persistent volume at `/workspace`.
@@ -54,12 +58,13 @@ print(torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'NO GPU')"
 Record: Python version · CUDA availability · GPU name · **GPU VRAM** (A100 = 40 GB
 or 80 GB) · disk space · free space on `/workspace`.
 
-| Field | Expected (A100 pod) | Actual (fill in) |
+| Field | Expected (A100 pod) | Actual (verified 2026-09-28) |
 | --- | --- | --- |
-| GPU | NVIDIA A100 (40/80 GB) | _run nvidia-smi_ |
-| CUDA | 12.x | _run_ |
-| Python (base) | ≥ 3.10 | _run_ |
-| `/workspace` free | tens–hundreds GB | _run `df -h /workspace`_ |
+| GPU | NVIDIA A100 (40/80 GB) | NVIDIA A100 80GB PCIe, 79.3 GB VRAM, driver 570.211.01 |
+| CUDA | 12.x | 12.4 (torch 2.4.1+cu124), `torch.cuda.is_available()`=True |
+| Python (base) | ≥ 3.10 | 3.11.10 |
+| `/workspace` free | tens–hundreds GB | network volume, hundreds of TB free |
+| Tests | 71 pass | 70 passed, 1 skipped (dataset-dependent test; data not on pod) |
 
 ## 2. Clone the repo
 

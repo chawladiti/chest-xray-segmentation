@@ -99,32 +99,22 @@ cmd_deploy() {
   echo "done. remote path: $REMOTE_DIR"
 }
 
-cmd_autostop() {
-  read -r ip port < <(_ssh_endpoint)
-  [[ -z "${ip:-}" ]] && { echo "no SSH endpoint; run: $0 start" >&2; exit 1; }
-  echo "installing pod-side idle auto-stop watchdog ..."
-  scp "${_ssh_opts[@]}" -P "$port" "$REPO_ROOT/scripts/runpod_idle_autostop.sh" "root@$ip:/root/runpod_idle_autostop.sh"
-  local mins="${RUNPOD_IDLE_MINUTES:-30}" thr="${RUNPOD_IDLE_GPU_UTIL_THRESHOLD:-5}" pid="$RUNPOD_POD_ID" key="$RUNPOD_API_KEY"
-  # Bake env into a wrapper and launch fully detached (setsid) so it survives the
-  # SSH channel closing. runpodctl is configured so the pod can stop itself.
-  ssh "${_ssh_opts[@]}" -p "$port" "root@$ip" 'bash -s' <<EOS
-runpodctl config --apiKey '$key' >/dev/null 2>&1
-chmod 600 /root/.runpod/config.toml 2>/dev/null || true
-chmod +x /root/runpod_idle_autostop.sh
-cat > /root/start_autostop.sh <<'WRAP'
-#!/usr/bin/env bash
-export RUNPOD_POD_ID=$pid
-export RUNPOD_IDLE_MINUTES=$mins
-export RUNPOD_IDLE_GPU_UTIL_THRESHOLD=$thr
-exec /root/runpod_idle_autostop.sh
-WRAP
-chmod +x /root/start_autostop.sh
-pkill -f runpod_idle_autostop.sh 2>/dev/null || true
-setsid bash /root/start_autostop.sh >/root/idle_autostop.log 2>&1 < /dev/null &
-sleep 2
-pgrep -fa runpod_idle_autostop.sh || echo "WARNING: watchdog not running"
-EOS
-  echo "watchdog installed (log on pod: /root/idle_autostop.log)"
+cmd_watch() {  # foreground reliable local watchdog
+  exec "$REPO_ROOT/scripts/runpod_watch_local.sh"
+}
+
+cmd_autostop() {  # background reliable local watchdog (survives this shell)
+  # The pod's minimal container has no cron/systemd/tmux, so a pod-side daemon
+  # gets reaped. This local watcher polls GPU util over SSH and stops the pod
+  # via runpodctl when idle. Secrets stay local.
+  local log="$REPO_ROOT/.runpod_autostop.log"
+  pkill -f runpod_watch_local.sh 2>/dev/null || true
+  nohup "$REPO_ROOT/scripts/runpod_watch_local.sh" >"$log" 2>&1 &
+  disown || true
+  sleep 2
+  echo "local idle watchdog started (pid $!) -> log: $log"
+  echo "  idle_minutes=${RUNPOD_IDLE_MINUTES:-30} threshold=${RUNPOD_IDLE_GPU_UTIL_THRESHOLD:-5}%"
+  tail -n 2 "$log" 2>/dev/null || true
 }
 
 case "${1:-}" in
@@ -135,5 +125,6 @@ case "${1:-}" in
   ssh)     shift; cmd_ssh "$@" ;;
   deploy)  cmd_deploy ;;
   autostop) cmd_autostop ;;
-  *) echo "usage: $0 {start|stop|status|info|ssh|deploy|autostop}"; exit 1 ;;
+  watch)   cmd_watch ;;
+  *) echo "usage: $0 {start|stop|status|info|ssh|deploy|autostop|watch}"; exit 1 ;;
 esac
