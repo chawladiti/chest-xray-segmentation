@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "num_cases": 8,
+    "num_missing": 0,
+    "mean_dice": 0.025375,
+    "mean_dice_pct": 2.5375,
+    "mean_iou": 0.013374
+  },
+  "per_case": [
+    {
+      "case": "patient64547_study1_view2_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 607,
+      "pred_pos": 14619
+    },
+    {
+      "case": "patient64581_study1_view2_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 0,
+      "pred_pos": 159
+    },
+    {
+      "case": "patient64597_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 0,
+      "pred_pos": 2001
+    },
+    {
+      "case": "patient64600_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 10528,
+      "pred_pos": 1126
+    },
+    {
+      "case": "patient64603_study1_view1_frontal",
+      "dice": 0.090719,
+      "iou": 0.047515,
+      "gt_pos": 28502,
+      "pred_pos": 5471
+    },
+    {
+      "case": "patient64655_study1_view1_frontal",
+      "dice": 0.11228,
+      "iou": 0.059479,
+      "gt_pos": 25366,
+      "pred_pos": 4666
+    },
+    {
+      "case": "patient64680_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 0,
+      "pred_pos": 3214
+    },
+    {
+      "case": "patient64730_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 0,
+      "pred_pos": 63
+    }
+  ]
+}

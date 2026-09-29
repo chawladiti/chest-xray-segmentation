@@ -1,0 +1,9 @@
+case,dice,iou,gt_pos,pred_pos,status
+patient64547_study1_view2_frontal,0.0,0.0,607,14619,
+patient64581_study1_view2_frontal,0.0,0.0,0,159,
+patient64597_study1_view1_frontal,0.0,0.0,0,2001,
+patient64600_study1_view1_frontal,0.0,0.0,10528,1126,
+patient64603_study1_view1_frontal,0.090719,0.047515,28502,5471,
+patient64655_study1_view1_frontal,0.11228,0.059479,25366,4666,
+patient64680_study1_view1_frontal,0.0,0.0,0,3214,
+patient64730_study1_view1_frontal,0.0,0.0,0,63,
