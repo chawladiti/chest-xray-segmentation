@@ -21,6 +21,7 @@ metrics, or Dice scores are recorded until they are genuinely produced.
 | NVIDIA method    | ⛔ NOT YET IMPLEMENTED |
 | Evaluation       | ✅ FRAMEWORK IMPLEMENTED (Dice/IoU, per-pathology, comparison; 63 tests PASS) |
 | Frontend         | ⛔ NOT YET IMPLEMENTED |
+| RunPod setup | 🟡 DOCS + env-check ready (blocked: no GitHub remote; agent runs locally, not on pod) |
 
 ## Notes
 

@@ -102,6 +102,8 @@ venv/
 env/
 ENV/
 .conda/
+# Isolated per-model environments on RunPod (nnunet / sam2 / medsam / core)
+.envs/
 
 # -----------------------------------------------------------------------------
 # OS / editor cruft
