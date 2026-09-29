@@ -15,7 +15,7 @@ metrics, or Dice scores are recorded until they are genuinely produced.
 | Preprocessing    | ✅ IMPLEMENTED (GT masks decoded; manifest + validation PASS) |
 | Experimental split | ✅ CREATED (patient-level dev split; official test untouched; checks PASS) |
 | Training targets | ✅ BUILT (VALID_POSITIVE 643 / VALID_NEGATIVE 1696 / IGNORE 1; multi-label; checks PASS) |
-| nnU-Net          | ⛔ NOT YET IMPLEMENTED |
+| nnU-Net          | 🟡 DEMO PASS on A100 (v2.8.1; per-pathology binary; integrity PASS; 5-epoch demo trained+predicted+Dice/IoU); full 20-epoch config ready, not run |
 | SAM 2            | ⛔ NOT YET IMPLEMENTED |
 | MedSAM           | ⛔ NOT YET IMPLEMENTED |
 | NVIDIA method    | ⛔ NOT YET IMPLEMENTED |
