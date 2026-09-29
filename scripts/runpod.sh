@@ -104,15 +104,27 @@ cmd_autostop() {
   [[ -z "${ip:-}" ]] && { echo "no SSH endpoint; run: $0 start" >&2; exit 1; }
   echo "installing pod-side idle auto-stop watchdog ..."
   scp "${_ssh_opts[@]}" -P "$port" "$REPO_ROOT/scripts/runpod_idle_autostop.sh" "root@$ip:/root/runpod_idle_autostop.sh"
-  # configure runpodctl on the pod so it can stop itself; keep key file 600
-  ssh "${_ssh_opts[@]}" -p "$port" "root@$ip" \
-    "runpodctl config --apiKey '$RUNPOD_API_KEY' >/dev/null 2>&1; chmod 600 /root/.runpod/config.toml 2>/dev/null || true; \
-     chmod +x /root/runpod_idle_autostop.sh; \
-     export RUNPOD_POD_ID='$RUNPOD_POD_ID' RUNPOD_IDLE_MINUTES='${RUNPOD_IDLE_MINUTES:-30}' RUNPOD_IDLE_GPU_UTIL_THRESHOLD='${RUNPOD_IDLE_GPU_UTIL_THRESHOLD:-5}'; \
-     pkill -f runpod_idle_autostop.sh 2>/dev/null || true; \
-     RUNPOD_POD_ID='$RUNPOD_POD_ID' RUNPOD_IDLE_MINUTES='${RUNPOD_IDLE_MINUTES:-30}' RUNPOD_IDLE_GPU_UTIL_THRESHOLD='${RUNPOD_IDLE_GPU_UTIL_THRESHOLD:-5}' \
-       nohup /root/runpod_idle_autostop.sh >/root/idle_autostop.log 2>&1 & echo started"
-  echo "watchdog running on pod (log: /root/idle_autostop.log)"
+  local mins="${RUNPOD_IDLE_MINUTES:-30}" thr="${RUNPOD_IDLE_GPU_UTIL_THRESHOLD:-5}" pid="$RUNPOD_POD_ID" key="$RUNPOD_API_KEY"
+  # Bake env into a wrapper and launch fully detached (setsid) so it survives the
+  # SSH channel closing. runpodctl is configured so the pod can stop itself.
+  ssh "${_ssh_opts[@]}" -p "$port" "root@$ip" 'bash -s' <<EOS
+runpodctl config --apiKey '$key' >/dev/null 2>&1
+chmod 600 /root/.runpod/config.toml 2>/dev/null || true
+chmod +x /root/runpod_idle_autostop.sh
+cat > /root/start_autostop.sh <<'WRAP'
+#!/usr/bin/env bash
+export RUNPOD_POD_ID=$pid
+export RUNPOD_IDLE_MINUTES=$mins
+export RUNPOD_IDLE_GPU_UTIL_THRESHOLD=$thr
+exec /root/runpod_idle_autostop.sh
+WRAP
+chmod +x /root/start_autostop.sh
+pkill -f runpod_idle_autostop.sh 2>/dev/null || true
+setsid bash /root/start_autostop.sh >/root/idle_autostop.log 2>&1 < /dev/null &
+sleep 2
+pgrep -fa runpod_idle_autostop.sh || echo "WARNING: watchdog not running"
+EOS
+  echo "watchdog installed (log on pod: /root/idle_autostop.log)"
 }
 
 case "${1:-}" in

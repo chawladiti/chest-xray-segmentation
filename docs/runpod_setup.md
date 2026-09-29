@@ -4,19 +4,38 @@ How to stand up the CheXlocalize project on a RunPod A100 pod. This project uses
 **isolated per-model environments** because the official model stacks have
 conflicting Python/PyTorch requirements.
 
-> ⚠️ **Execution note.** The Cursor agent session that scaffolded this project
-> runs on a **local macOS laptop**, not on the RunPod pod. The GPU/`nvidia-smi`
-> values below must be filled in by running the commands **on the pod** (or by
-> giving the agent a shell on the pod). Nothing here is fabricated: run
-> `scripts/check_environment.py` on the A100 to capture the real values.
+## On-demand control + automatic on/off (quick reference)
 
-## 0. Prerequisites / blockers
+The pod is managed from the local machine with `scripts/runpod.sh` (reads
+secrets from git-ignored `.env`: `RUNPOD_API_KEY`, `RUNPOD_POD_ID`). The pod's
+public IP/SSH port change on every start and are fetched live — never hard-coded.
 
-1. **GitHub remote required.** This repo currently has **no remote** — it exists
-   only locally. Before it can be cloned on RunPod, push it to GitHub (or a
-   Cursor-hosted origin). Example (GitHub CLI):
+```bash
+scripts/runpod.sh start      # resume the on-demand A100, wait, print SSH string
+scripts/runpod.sh status     # desiredStatus + uptime + $/hr
+scripts/runpod.sh info       # current ssh root@IP -p PORT -i KEY
+scripts/runpod.sh ssh [cmd]  # shell into the pod (or run a command)
+scripts/runpod.sh deploy     # push git-tracked files -> /workspace/chexlocalize-medical-imaging
+scripts/runpod.sh autostop   # install pod-side idle auto-stop watchdog
+scripts/runpod.sh stop       # stop now (halts GPU billing; keeps /workspace)
+```
+
+**Automatic turn-OFF:** `scripts/runpod_idle_autostop.sh` runs *on the pod*,
+polls GPU utilization each minute, and calls `runpodctl stop` after
+`RUNPOD_IDLE_MINUTES` (default 30) of the GPU staying below
+`RUNPOD_IDLE_GPU_UTIL_THRESHOLD`% (default 5). This survives the laptop sleeping,
+so an idle A100 stops billing on its own. **Turn-ON is manual/local**
+(`scripts/runpod.sh start`) because a stopped pod cannot start itself.
+
+Current pod: on-demand **NVIDIA A100 80GB PCIe**, secure cloud, ~$1.59/hr,
+image `runpod/pytorch:2.4.0-py3.11-cuda12.4.1`, persistent volume at `/workspace`.
+
+## 0. Prerequisites
+
+1. **No GitHub remote needed.** `scripts/runpod.sh deploy` ships git-tracked
+   files over SSH via `git archive` (no data/, no `.venv`, no secrets). You may
+   still push to GitHub if you prefer `git clone` on the pod:
    ```bash
-   # from the local machine, inside the repo
    gh repo create <owner>/chexlocalize-medical-imaging --private --source . --push
    ```
 2. **Dataset SAS URL** (gated). The CheXlocalize download needs your Stanford AIMI
