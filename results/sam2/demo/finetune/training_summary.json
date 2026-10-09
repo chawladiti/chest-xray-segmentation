@@ -1,0 +1,23 @@
+{
+  "model": "sam2",
+  "training_type": "fine_tuned_oracle_prompted",
+  "weights_updated": true,
+  "mode": "demo",
+  "hf_model_id": "facebook/sam2.1-hiera-tiny",
+  "n_train": 8,
+  "n_val": 4,
+  "max_epochs": 2,
+  "disclaimer": "Oracle-box prompting is a controlled segmentation experiment and is NOT an end-to-end comparison with nnU-Net.",
+  "negatives_policy": "excluded_from_training",
+  "holdout": "test",
+  "device": "cuda",
+  "best_val_dice": 0.819944,
+  "epochs_run": [
+    1,
+    2
+  ],
+  "checkpoint_best": "/workspace/chexlocalize-medical-imaging/results/sam2/demo/finetune/checkpoints/checkpoint_best.pt",
+  "checkpoint_latest": "/workspace/chexlocalize-medical-imaging/results/sam2/demo/finetune/checkpoints/checkpoint_latest.pt",
+  "training_history": "/workspace/chexlocalize-medical-imaging/results/sam2/demo/finetune/training_history.csv",
+  "n_trainable_tensors": 308
+}

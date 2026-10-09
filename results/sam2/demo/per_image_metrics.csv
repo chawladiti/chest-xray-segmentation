@@ -1,0 +1,21 @@
+image_id,patient_id,split,pathology,model,training_type,weights_updated,checkpoint,epoch,target_status,dice,dice_percentage,iou,flags
+patient64722_study1_view1_frontal,patient64722,internal_val,Enlarged Cardiomediastinum,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.8243975848300885,82.43975848300884,0.7012554365252279,
+patient64722_study1_view1_frontal,patient64722,internal_val,Cardiomegaly,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.8821364062247998,88.21364062247999,0.7891270555163955,
+patient64722_study1_view1_frontal,patient64722,internal_val,Lung Lesion,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_NEGATIVE,1.0,100.0,1.0,empty_prediction;empty_ground_truth
+patient64722_study1_view1_frontal,patient64722,internal_val,Airspace Opacity,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.8122754480293158,81.22754480293159,0.683892108386225,
+patient64722_study1_view1_frontal,patient64722,internal_val,Edema,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_NEGATIVE,1.0,100.0,1.0,empty_prediction;empty_ground_truth
+patient64722_study1_view1_frontal,patient64722,internal_val,Consolidation,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.7686064211548078,76.86064211548079,0.6241760833896919,
+patient64722_study1_view1_frontal,patient64722,internal_val,Atelectasis,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.8636978132343178,86.36978132343178,0.7600951782841388,
+patient64722_study1_view1_frontal,patient64722,internal_val,Pneumothorax,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_NEGATIVE,1.0,100.0,1.0,empty_prediction;empty_ground_truth
+patient64722_study1_view1_frontal,patient64722,internal_val,Pleural Effusion,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.7806594176081177,78.06594176081177,0.6402308172805674,
+patient64722_study1_view1_frontal,patient64722,internal_val,Support Devices,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.7402267156862745,74.02267156862746,0.5875872467715655,
+patient64580_study1_view1_frontal,patient64580,internal_val,Enlarged Cardiomediastinum,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.9069333251747311,90.69333251747311,0.8297145508710235,
+patient64580_study1_view1_frontal,patient64580,internal_val,Cardiomegaly,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.8824271943693579,88.24271943693579,0.7895925794932058,
+patient64580_study1_view1_frontal,patient64580,internal_val,Lung Lesion,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_NEGATIVE,1.0,100.0,1.0,empty_prediction;empty_ground_truth
+patient64580_study1_view1_frontal,patient64580,internal_val,Airspace Opacity,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.6863124118903678,68.63124118903679,0.5224319831459749,
+patient64580_study1_view1_frontal,patient64580,internal_val,Edema,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_NEGATIVE,1.0,100.0,1.0,empty_prediction;empty_ground_truth
+patient64580_study1_view1_frontal,patient64580,internal_val,Consolidation,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.8243300293236968,82.43300293236967,0.7011576802029753,
+patient64580_study1_view1_frontal,patient64580,internal_val,Atelectasis,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.4923691061755411,49.23691061755411,0.32658464892990585,
+patient64580_study1_view1_frontal,patient64580,internal_val,Pneumothorax,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_NEGATIVE,1.0,100.0,1.0,empty_prediction;empty_ground_truth
+patient64580_study1_view1_frontal,patient64580,internal_val,Pleural Effusion,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_POSITIVE,0.7000748974427108,70.00748974427108,0.5385501795953338,
+patient64580_study1_view1_frontal,patient64580,internal_val,Support Devices,sam2,pretrained,False,facebook/sam2.1-hiera-tiny,,VALID_NEGATIVE,1.0,100.0,1.0,empty_prediction;empty_ground_truth

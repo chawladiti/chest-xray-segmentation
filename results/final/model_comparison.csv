@@ -1,0 +1,6 @@
+model,training_type,protocol,n,mean_dice,mean_iou,best_epoch
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,137,0.329050,0.252105,7
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,137,0.662719,0.530928,
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,137,0.761902,0.655384,12
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,137,0.628756,0.488069,
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,137,0.787795,0.686786,4

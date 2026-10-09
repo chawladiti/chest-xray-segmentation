@@ -1,0 +1,13 @@
+{
+  "model": "medsam",
+  "checkpoint_epoch": 4,
+  "training_val_dice": 0.787795,
+  "n_predictions": 137,
+  "predictions_root": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions",
+  "mean_dice": 0.787795,
+  "mean_iou": 0.686786,
+  "training_val_dice_abs_diff": -0.0,
+  "per_image_metrics": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/per_image_metrics.csv",
+  "official_test_used": false,
+  "weights_changed_this_run": false
+}

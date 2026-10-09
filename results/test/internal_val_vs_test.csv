@@ -1,0 +1,6 @@
+model,training,protocol,internal_val_dice,test_dice,test_minus_internal_val,n_internal_val,n_test
+nnU-Net v2,Supervised,unprompted supervised segmentation,0.329050,0.309919,-0.019131,137,1534
+SAM 2.1 Hiera Tiny,Pretrained,oracle GT-box prompted,0.662719,0.645995,-0.016724,137,1534
+SAM 2.1 Hiera Tiny,Fine-tuned,oracle GT-box prompted,0.761902,0.742136,-0.019766,137,1534
+MedSAM ViT-B,Pretrained,oracle GT-box prompted,0.628756,0.607481,-0.021275,137,1534
+MedSAM ViT-B,Fine-tuned,oracle GT-box prompted,0.787795,0.772297,-0.015498,137,1534

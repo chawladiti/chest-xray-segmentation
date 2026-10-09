@@ -1,0 +1,116 @@
+{
+  "model": "medsam",
+  "architecture": "vit_b",
+  "training_type": "fine_tuned_oracle_prompted",
+  "weights_updated": true,
+  "oracle_prompted": true,
+  "mode": "full",
+  "n_train": 506,
+  "n_val": 137,
+  "max_epochs": 20,
+  "batch_size": 1,
+  "disclaimer": "Oracle GT bounding-box prompting is a controlled segmentation experiment. It is NOT an end-to-end automatic localization experiment and is not a fair comparison with nnU-Net.",
+  "holdout": "test",
+  "init_checkpoint": "/workspace/chexlocalize-medical-imaging/checkpoints/medsam/medsam_vit_b.pth",
+  "device": "cuda",
+  "best_val_dice": 0.787795,
+  "best_epoch": 4,
+  "final_val_dice": 0.787246,
+  "epochs_run": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "checkpoint_best": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/checkpoints/checkpoint_best.pt",
+  "checkpoint_latest": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/checkpoints/checkpoint_latest.pt",
+  "training_history": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/training_history.csv",
+  "n_trainable_tensors": 297,
+  "parameter_status": {
+    "image_encoder": {
+      "tensors": 177,
+      "trainable_tensors": 177,
+      "params": 89670912,
+      "trainable_params": 89670912
+    },
+    "prompt_encoder": {
+      "tensors": 16,
+      "trainable_tensors": 0,
+      "params": 6220,
+      "trainable_params": 0
+    },
+    "mask_decoder": {
+      "tensors": 120,
+      "trainable_tensors": 120,
+      "params": 4058340,
+      "trainable_params": 4058340
+    },
+    "other_parameter_names": [],
+    "n_trainable_tensors": 297,
+    "image_encoder_all_trainable": true,
+    "prompt_encoder_all_frozen": true,
+    "mask_decoder_all_trainable": true
+  },
+  "preprocess_cache_seconds": 3.045,
+  "epoch_runtimes": [
+    {
+      "epoch": 1,
+      "train_val_seconds": 188.613,
+      "save_seconds": 5.498,
+      "epoch_seconds": 194.401
+    },
+    {
+      "epoch": 2,
+      "train_val_seconds": 172.965,
+      "save_seconds": 5.437,
+      "epoch_seconds": 178.533
+    },
+    {
+      "epoch": 3,
+      "train_val_seconds": 172.738,
+      "save_seconds": 5.23,
+      "epoch_seconds": 178.184
+    },
+    {
+      "epoch": 4,
+      "train_val_seconds": 173.282,
+      "save_seconds": 5.49,
+      "epoch_seconds": 179.051
+    },
+    {
+      "epoch": 5,
+      "train_val_seconds": 173.49,
+      "save_seconds": 2.811,
+      "epoch_seconds": 176.515
+    },
+    {
+      "epoch": 6,
+      "train_val_seconds": 172.497,
+      "save_seconds": 2.695,
+      "epoch_seconds": 175.575
+    },
+    {
+      "epoch": 7,
+      "train_val_seconds": 172.875,
+      "save_seconds": 2.833,
+      "epoch_seconds": 176.035
+    },
+    {
+      "epoch": 8,
+      "train_val_seconds": 174.056,
+      "save_seconds": 2.987,
+      "epoch_seconds": 177.153
+    },
+    {
+      "epoch": 9,
+      "train_val_seconds": 173.998,
+      "save_seconds": 2.81,
+      "epoch_seconds": 177.025
+    }
+  ]
+}

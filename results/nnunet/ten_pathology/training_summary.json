@@ -1,0 +1,42 @@
+{
+  "diagnostic": true,
+  "disclaimer": "This report is diagnostic only. It is not a scientific conclusion about model quality. DEMO metrics must not be mixed with FULL.",
+  "n_epochs_logged": 12,
+  "last_epoch": 12,
+  "max_epochs": 20,
+  "best_val_dice": 0.455521,
+  "best_val_dice_epoch": 7,
+  "final_val_dice": 0.454152,
+  "val_dice_slope_last_3": 0.016091999999999995,
+  "train_dice_slope_last_3": 0.008800000000000002,
+  "val_dice_plateau_range": 0.083376,
+  "still_improving_near_max_epochs": false,
+  "plateaued": false,
+  "possible_overfitting": false,
+  "messages": [
+    "No strong improving / plateau / overfitting pattern flagged. Inspect the curves before deciding."
+  ],
+  "val_loss_final": -0.165428,
+  "representation": "nnunet_v2_overlapping_regions_bitmask",
+  "n_region_channels": 10,
+  "pathologies": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Enlarged Cardiomediastinum",
+    "Lung Lesion",
+    "Airspace Opacity",
+    "Pleural Effusion",
+    "Pneumothorax",
+    "Support Devices"
+  ],
+  "ignore_cases": [
+    "patient64612_study1_view1_frontal"
+  ],
+  "ignore_channel_applications": 1218,
+  "early_stopped": true,
+  "best_val_dice_selection": 0.455521,
+  "selection_metric": "pixel-aggregated hard Dice over supervised region channels (sigmoid > 0.5). IGNORE channels excluded. Not the 137-pair mean.",
+  "official_test_used": false
+}

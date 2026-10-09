@@ -1,0 +1,21 @@
+{
+  "diagnostic": true,
+  "disclaimer": "This report is diagnostic only. It is not a scientific conclusion about model quality. DEMO metrics must not be mixed with FULL.",
+  "n_epochs_logged": 8,
+  "last_epoch": 8,
+  "max_epochs": 20,
+  "best_val_dice": 0.29,
+  "best_val_dice_epoch": 8,
+  "final_val_dice": 0.29,
+  "val_dice_slope_last_3": 0.024999999999999994,
+  "train_dice_slope_last_3": 0.03,
+  "val_dice_plateau_range": 0.09999999999999998,
+  "still_improving_near_max_epochs": false,
+  "plateaued": false,
+  "possible_overfitting": false,
+  "messages": [
+    "No strong improving / plateau / overfitting pattern flagged. Inspect the curves before deciding."
+  ],
+  "val_loss_final": 0.93,
+  "synthetic_dry_run": true
+}

@@ -1,0 +1,12 @@
+model,training_type,split,pathology,num_evaluated,mean_dice,median_dice,std_dice,mean_iou,dice_percentage
+sam2,pretrained,internal_val,Airspace Opacity,2,0.749294,0.749294,0.062982,0.603162,74.9294
+sam2,pretrained,internal_val,Atelectasis,2,0.678033,0.678033,0.185664,0.54334,67.8033
+sam2,pretrained,internal_val,Cardiomegaly,2,0.882282,0.882282,0.000145,0.78936,88.2282
+sam2,pretrained,internal_val,Consolidation,2,0.796468,0.796468,0.027862,0.662667,79.6468
+sam2,pretrained,internal_val,Edema,2,1.0,1.0,0.0,1.0,100.0
+sam2,pretrained,internal_val,Enlarged Cardiomediastinum,2,0.865665,0.865665,0.041268,0.765485,86.5665
+sam2,pretrained,internal_val,Lung Lesion,2,1.0,1.0,0.0,1.0,100.0
+sam2,pretrained,internal_val,Pleural Effusion,2,0.740367,0.740367,0.040292,0.58939,74.0367
+sam2,pretrained,internal_val,Pneumothorax,2,1.0,1.0,0.0,1.0,100.0
+sam2,pretrained,internal_val,Support Devices,2,0.870113,0.870113,0.129887,0.793794,87.0113
+sam2,pretrained,internal_val,__overall__,10,0.858222,,,0.77472,85.8222

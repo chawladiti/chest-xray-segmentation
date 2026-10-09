@@ -1,0 +1,385 @@
+{
+  "n_rows": 129,
+  "files": [
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64691_study1_view1_frontal/Airspace_Opacity.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64691_study1_view1_frontal/Airspace_Opacity.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64648_study1_view1_frontal/Airspace_Opacity.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64648_study1_view1_frontal/Airspace_Opacity.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64547_study1_view1_frontal/Airspace_Opacity.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64547_study1_view1_frontal/Airspace_Opacity.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64655_study1_view1_frontal/Atelectasis.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64655_study1_view1_frontal/Atelectasis.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64603_study1_view1_frontal/Atelectasis.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64603_study1_view1_frontal/Atelectasis.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64648_study1_view1_frontal/Atelectasis.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64648_study1_view1_frontal/Atelectasis.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64549_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64549_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64548_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64548_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64691_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64691_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64596_study1_view1_frontal/Edema.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64596_study1_view1_frontal/Edema.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64600_study1_view2_lateral/Edema.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64600_study1_view2_lateral/Edema.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64611_study1_view1_frontal/Edema.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64611_study1_view1_frontal/Edema.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64569_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64569_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64580_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64580_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64564_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64564_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64548_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64548_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64670_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64670_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64612_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64612_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64695_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64695_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64709_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64709_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64612_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64612_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64732_study1_view1_frontal/Airspace_Opacity.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64732_study1_view1_frontal/Airspace_Opacity.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64729_study1_view1_frontal/Airspace_Opacity.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64729_study1_view1_frontal/Airspace_Opacity.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64547_study1_view1_frontal/Airspace_Opacity.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64547_study1_view1_frontal/Airspace_Opacity.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64548_study1_view1_frontal/Atelectasis.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64548_study1_view1_frontal/Atelectasis.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64684_study1_view1_frontal/Atelectasis.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64684_study1_view1_frontal/Atelectasis.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64655_study1_view1_frontal/Atelectasis.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64655_study1_view1_frontal/Atelectasis.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64564_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64564_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64596_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64596_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64655_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64655_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64600_study1_view1_frontal/Edema.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64600_study1_view1_frontal/Edema.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64603_study1_view1_frontal/Edema.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64603_study1_view1_frontal/Edema.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64611_study1_view1_frontal/Edema.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64611_study1_view1_frontal/Edema.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64722_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64722_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64726_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64726_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64655_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64655_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64548_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64548_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64722_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64722_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64704_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64704_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64714_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64714_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64707_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64707_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64542_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64542_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64596_study1_view1_frontal/Airspace_Opacity.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64596_study1_view1_frontal/Airspace_Opacity.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64648_study1_view1_frontal/Airspace_Opacity.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64648_study1_view1_frontal/Airspace_Opacity.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64547_study1_view1_frontal/Airspace_Opacity.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64547_study1_view1_frontal/Airspace_Opacity.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64569_study1_view1_frontal/Atelectasis.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64569_study1_view1_frontal/Atelectasis.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64612_study1_view1_frontal/Atelectasis.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64612_study1_view1_frontal/Atelectasis.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64648_study1_view1_frontal/Atelectasis.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64648_study1_view1_frontal/Atelectasis.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64549_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64549_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64564_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64564_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64729_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64729_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64732_study1_view1_frontal/Edema.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64732_study1_view1_frontal/Edema.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64600_study1_view1_frontal/Edema.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64600_study1_view1_frontal/Edema.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64738_study1_view1_frontal/Edema.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64738_study1_view1_frontal/Edema.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64569_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64569_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64691_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64691_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64738_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64738_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64548_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64548_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64691_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64691_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64612_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64612_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64695_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64695_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64709_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64709_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64542_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64542_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64569_study1_view1_frontal/Airspace_Opacity.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64569_study1_view1_frontal/Airspace_Opacity.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64611_study1_view1_frontal/Airspace_Opacity.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64611_study1_view1_frontal/Airspace_Opacity.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64547_study1_view1_frontal/Airspace_Opacity.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64547_study1_view1_frontal/Airspace_Opacity.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64655_study1_view1_frontal/Atelectasis.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64655_study1_view1_frontal/Atelectasis.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64692_study1_view1_frontal/Atelectasis.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64692_study1_view1_frontal/Atelectasis.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64648_study1_view1_frontal/Atelectasis.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64648_study1_view1_frontal/Atelectasis.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64549_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64549_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64612_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64612_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64729_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64729_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64600_study1_view2_lateral/Edema.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64600_study1_view2_lateral/Edema.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64611_study1_view1_frontal/Edema.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64611_study1_view1_frontal/Edema.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64714_study1_view1_frontal/Edema.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64714_study1_view1_frontal/Edema.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64580_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64580_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64603_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64603_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64648_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64648_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64548_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64548_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64670_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64670_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64612_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64612_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64603_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64603_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64542_study1_view2_lateral/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64542_study1_view2_lateral/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64730_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64730_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64567_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64567_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64567_study1_view1_frontal/Support_Devices.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64567_study1_view1_frontal/Support_Devices.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64691_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64691_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64691_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64691_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64612_study1_view1_frontal/Pleural_Effusion.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64612_study1_view1_frontal/Pleural_Effusion.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64569_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64569_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions/internal_val/patient64569_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_finetuned/patient64569_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64569_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64569_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/results/medsam/full_oracle_finetuned/predictions/internal_val/patient64569_study1_view1_frontal/Cardiomegaly.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_finetuned/patient64569_study1_view1_frontal/Cardiomegaly.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/sam2/internal_val/patient64569_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/sam2_pretrained/patient64569_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    },
+    {
+      "remote": "/workspace/chexlocalize-medical-imaging/predictions/full_oracle/medsam/internal_val/patient64569_study1_view1_frontal/Enlarged_Cardiomediastinum.png",
+      "local": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/final/qualitative/_prediction_cache/medsam_pretrained/patient64569_study1_view1_frontal/Enlarged_Cardiomediastinum.png"
+    }
+  ]
+}

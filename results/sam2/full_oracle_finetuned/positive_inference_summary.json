@@ -1,0 +1,13 @@
+{
+  "model": "sam2",
+  "checkpoint_epoch": 12,
+  "training_val_dice": 0.761487,
+  "n_predictions": 137,
+  "predictions_root": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/predictions",
+  "mean_dice": 0.761902,
+  "mean_iou": 0.655384,
+  "training_val_dice_abs_diff": 0.000415,
+  "per_image_metrics": "/workspace/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned/per_image_metrics.csv",
+  "official_test_used": false,
+  "weights_changed_this_run": false
+}

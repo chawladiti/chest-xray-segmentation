@@ -1,0 +1,33 @@
+{
+  "model": "medsam",
+  "training_type": "oracle_prompted_pretrained",
+  "weights_updated": false,
+  "oracle_prompted": true,
+  "split": "internal_val",
+  "disclaimer": "Oracle GT bounding-box prompting is a controlled segmentation experiment. It is NOT an end-to-end automatic localization experiment and is not a fair comparison with nnU-Net.",
+  "n_predictions": 469,
+  "all": {
+    "num_evaluated": 469,
+    "mean_dice": 0.891556,
+    "median_dice": 1.0,
+    "std_dice": 0.202718,
+    "mean_iou": 0.850459,
+    "dice_percentage": 89.1556
+  },
+  "valid_positive": {
+    "num_evaluated": 137,
+    "mean_dice": 0.628756,
+    "median_dice": 0.695219,
+    "std_dice": 0.207651,
+    "mean_iou": 0.488069,
+    "dice_percentage": 62.8756
+  },
+  "valid_negative": {
+    "num_evaluated": 332,
+    "mean_dice": 1.0,
+    "median_dice": 1.0,
+    "std_dice": 0.0,
+    "mean_iou": 1.0,
+    "dice_percentage": 100.0
+  }
+}

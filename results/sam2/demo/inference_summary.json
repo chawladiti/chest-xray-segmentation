@@ -1,0 +1,21 @@
+{
+  "model": "sam2",
+  "training_type": "pretrained",
+  "weights_updated": false,
+  "split": "internal_val",
+  "mode": "demo",
+  "hf_model_id": "facebook/sam2.1-hiera-tiny",
+  "device": "cuda",
+  "n_images": 2,
+  "image_ids": [
+    "patient64722_study1_view1_frontal",
+    "patient64580_study1_view1_frontal"
+  ],
+  "n_predictions": 20,
+  "n_positive_prompts": 13,
+  "n_negative_empty": 7,
+  "n_skipped": 0,
+  "predictions_root": "/workspace/chexlocalize-medical-imaging/predictions/demo/sam2",
+  "prompt_mode": "gt_box",
+  "prompt_assumption": "Oracle GT bounding box for VALID_POSITIVE; empty mask for VALID_NEGATIVE; IGNORE skipped. SAM 2 weights were not updated."
+}

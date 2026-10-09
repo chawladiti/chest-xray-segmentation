@@ -1,0 +1,35 @@
+{
+  "model": "sam2",
+  "training_type": "pretrained",
+  "weights_updated": false,
+  "split": "internal_val",
+  "mode": "demo",
+  "n_predictions": 20,
+  "mean_dice": 0.858222,
+  "mean_iou": 0.77472,
+  "checkpoint": "facebook/sam2.1-hiera-tiny",
+  "pathologies": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Enlarged Cardiomediastinum",
+    "Lung Lesion",
+    "Airspace Opacity",
+    "Pleural Effusion",
+    "Pneumothorax",
+    "Support Devices"
+  ],
+  "overall_macro": {
+    "model": "sam2",
+    "training_type": "pretrained",
+    "split": "internal_val",
+    "pathology": "__overall__",
+    "num_evaluated": 10,
+    "mean_dice": 0.858222,
+    "median_dice": "",
+    "std_dice": "",
+    "mean_iou": 0.77472,
+    "dice_percentage": 85.8222
+  }
+}

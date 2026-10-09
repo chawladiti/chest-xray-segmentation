@@ -1,0 +1,6 @@
+model,training_type,protocol,evaluation_population,n,n_missing,mean_dice,median_dice,mean_iou,best_epoch,scored_on_all_1534,metrics_source
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,"1534 VALID_POSITIVE official-test (image_id, pathology) pairs",1534,0,0.309919,0.161641,0.234052,7,True,results/test/metrics/nnunet_per_pair.csv
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,"1534 VALID_POSITIVE official-test (image_id, pathology) pairs",1534,0,0.645995,0.702857,0.511932,N/A,True,results/test/metrics/sam2_pretrained_per_pair.csv
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,"1534 VALID_POSITIVE official-test (image_id, pathology) pairs",1534,0,0.742136,0.825773,0.630198,12,True,results/test/metrics/sam2_finetuned_per_pair.csv
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,"1534 VALID_POSITIVE official-test (image_id, pathology) pairs",1534,0,0.607481,0.644142,0.466588,N/A,True,results/test/metrics/medsam_pretrained_per_pair.csv
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,"1534 VALID_POSITIVE official-test (image_id, pathology) pairs",1534,0,0.772297,0.849549,0.663990,4,True,results/test/metrics/medsam_finetuned_per_pair.csv

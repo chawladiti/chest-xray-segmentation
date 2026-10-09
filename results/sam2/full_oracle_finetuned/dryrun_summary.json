@@ -1,0 +1,13 @@
+{
+  "dry_run": true,
+  "model": "sam2",
+  "training_type": "fine_tuned_oracle_prompted",
+  "weights_updated": false,
+  "mode": "full",
+  "n_train": 506,
+  "n_val": 137,
+  "max_epochs": 20,
+  "disclaimer": "Oracle-box prompting is a controlled segmentation experiment and is NOT an end-to-end comparison with nnU-Net.",
+  "holdout": "test",
+  "results_dir": "/Users/aditi/Projects/chexlocalize-medical-imaging/results/sam2/full_oracle_finetuned"
+}

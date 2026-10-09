@@ -1,0 +1,309 @@
+{
+  "model": "sam2",
+  "training_type": "oracle_prompted_pretrained",
+  "weights_updated": false,
+  "split": "internal_val",
+  "output_tag": "full_oracle",
+  "checkpoint": "facebook/sam2.1-hiera-tiny",
+  "n_predictions": 469,
+  "disclaimer": "Oracle-prompted SAM 2 uses ground-truth localization to construct the prompt and is therefore not a fair end-to-end comparison with nnU-Net.",
+  "all": {
+    "num_evaluated": 469,
+    "mean_dice": 0.901476,
+    "median_dice": 1.0,
+    "std_dice": 0.194104,
+    "mean_iou": 0.862979,
+    "dice_percentage": 90.1476
+  },
+  "valid_positive": {
+    "num_evaluated": 137,
+    "mean_dice": 0.662719,
+    "median_dice": 0.728879,
+    "std_dice": 0.220115,
+    "mean_iou": 0.530928,
+    "dice_percentage": 66.2719
+  },
+  "valid_negative": {
+    "num_evaluated": 332,
+    "mean_dice": 1.0,
+    "median_dice": 1.0,
+    "std_dice": 0.0,
+    "mean_iou": 1.0,
+    "dice_percentage": 100.0
+  },
+  "per_pathology": {
+    "Atelectasis": {
+      "all": {
+        "num_evaluated": 47,
+        "mean_dice": 0.89843,
+        "median_dice": 1.0,
+        "std_dice": 0.178273,
+        "mean_iou": 0.854761,
+        "dice_percentage": 89.843
+      },
+      "valid_positive": {
+        "num_evaluated": 14,
+        "mean_dice": 0.659014,
+        "median_dice": 0.660475,
+        "std_dice": 0.158293,
+        "mean_iou": 0.512412,
+        "dice_percentage": 65.9014
+      },
+      "valid_negative": {
+        "num_evaluated": 33,
+        "mean_dice": 1.0,
+        "median_dice": 1.0,
+        "std_dice": 0.0,
+        "mean_iou": 1.0,
+        "dice_percentage": 100.0
+      }
+    },
+    "Cardiomegaly": {
+      "all": {
+        "num_evaluated": 47,
+        "mean_dice": 0.938133,
+        "median_dice": 1.0,
+        "std_dice": 0.089232,
+        "mean_iou": 0.895809,
+        "dice_percentage": 93.8133
+      },
+      "valid_positive": {
+        "num_evaluated": 17,
+        "mean_dice": 0.828955,
+        "median_dice": 0.840901,
+        "std_dice": 0.057784,
+        "mean_iou": 0.711943,
+        "dice_percentage": 82.8955
+      },
+      "valid_negative": {
+        "num_evaluated": 30,
+        "mean_dice": 1.0,
+        "median_dice": 1.0,
+        "std_dice": 0.0,
+        "mean_iou": 1.0,
+        "dice_percentage": 100.0
+      }
+    },
+    "Consolidation": {
+      "all": {
+        "num_evaluated": 47,
+        "mean_dice": 0.973459,
+        "median_dice": 1.0,
+        "std_dice": 0.075195,
+        "mean_iou": 0.957013,
+        "dice_percentage": 97.3459
+      },
+      "valid_positive": {
+        "num_evaluated": 6,
+        "mean_dice": 0.792093,
+        "median_dice": 0.796468,
+        "std_dice": 0.081144,
+        "mean_iou": 0.663266,
+        "dice_percentage": 79.2093
+      },
+      "valid_negative": {
+        "num_evaluated": 41,
+        "mean_dice": 1.0,
+        "median_dice": 1.0,
+        "std_dice": 0.0,
+        "mean_iou": 1.0,
+        "dice_percentage": 100.0
+      }
+    },
+    "Edema": {
+      "all": {
+        "num_evaluated": 47,
+        "mean_dice": 0.931615,
+        "median_dice": 1.0,
+        "std_dice": 0.137687,
+        "mean_iou": 0.897853,
+        "dice_percentage": 93.1615
+      },
+      "valid_positive": {
+        "num_evaluated": 10,
+        "mean_dice": 0.67859,
+        "median_dice": 0.698892,
+        "std_dice": 0.088181,
+        "mean_iou": 0.519908,
+        "dice_percentage": 67.859
+      },
+      "valid_negative": {
+        "num_evaluated": 37,
+        "mean_dice": 1.0,
+        "median_dice": 1.0,
+        "std_dice": 0.0,
+        "mean_iou": 1.0,
+        "dice_percentage": 100.0
+      }
+    },
+    "Enlarged Cardiomediastinum": {
+      "all": {
+        "num_evaluated": 47,
+        "mean_dice": 0.920287,
+        "median_dice": 1.0,
+        "std_dice": 0.098842,
+        "mean_iou": 0.867175,
+        "dice_percentage": 92.0287
+      },
+      "valid_positive": {
+        "num_evaluated": 20,
+        "mean_dice": 0.812675,
+        "median_dice": 0.808072,
+        "std_dice": 0.052919,
+        "mean_iou": 0.68786,
+        "dice_percentage": 81.2675
+      },
+      "valid_negative": {
+        "num_evaluated": 27,
+        "mean_dice": 1.0,
+        "median_dice": 1.0,
+        "std_dice": 0.0,
+        "mean_iou": 1.0,
+        "dice_percentage": 100.0
+      }
+    },
+    "Lung Lesion": {
+      "all": {
+        "num_evaluated": 47,
+        "mean_dice": 0.995734,
+        "median_dice": 1.0,
+        "std_dice": 0.028935,
+        "mean_iou": 0.992893,
+        "dice_percentage": 99.5734
+      },
+      "valid_positive": {
+        "num_evaluated": 1,
+        "mean_dice": 0.799485,
+        "median_dice": 0.799485,
+        "std_dice": 0.0,
+        "mean_iou": 0.665951,
+        "dice_percentage": 79.9485
+      },
+      "valid_negative": {
+        "num_evaluated": 46,
+        "mean_dice": 1.0,
+        "median_dice": 1.0,
+        "std_dice": 0.0,
+        "mean_iou": 1.0,
+        "dice_percentage": 100.0
+      }
+    },
+    "Airspace Opacity": {
+      "all": {
+        "num_evaluated": 46,
+        "mean_dice": 0.832276,
+        "median_dice": 0.881482,
+        "std_dice": 0.184151,
+        "mean_iou": 0.751827,
+        "dice_percentage": 83.2276
+      },
+      "valid_positive": {
+        "num_evaluated": 27,
+        "mean_dice": 0.714248,
+        "median_dice": 0.756581,
+        "std_dice": 0.155076,
+        "mean_iou": 0.577187,
+        "dice_percentage": 71.4248
+      },
+      "valid_negative": {
+        "num_evaluated": 19,
+        "mean_dice": 1.0,
+        "median_dice": 1.0,
+        "std_dice": 0.0,
+        "mean_iou": 1.0,
+        "dice_percentage": 100.0
+      }
+    },
+    "Pleural Effusion": {
+      "all": {
+        "num_evaluated": 47,
+        "mean_dice": 0.855139,
+        "median_dice": 1.0,
+        "std_dice": 0.278411,
+        "mean_iou": 0.822343,
+        "dice_percentage": 85.5139
+      },
+      "valid_positive": {
+        "num_evaluated": 13,
+        "mean_dice": 0.476273,
+        "median_dice": 0.584051,
+        "std_dice": 0.286033,
+        "mean_iou": 0.357702,
+        "dice_percentage": 47.6273
+      },
+      "valid_negative": {
+        "num_evaluated": 34,
+        "mean_dice": 1.0,
+        "median_dice": 1.0,
+        "std_dice": 0.0,
+        "mean_iou": 1.0,
+        "dice_percentage": 100.0
+      }
+    },
+    "Pneumothorax": {
+      "all": {
+        "num_evaluated": 47,
+        "mean_dice": 0.978271,
+        "median_dice": 1.0,
+        "std_dice": 0.086907,
+        "mean_iou": 0.968085,
+        "dice_percentage": 97.8271
+      },
+      "valid_positive": {
+        "num_evaluated": 3,
+        "mean_dice": 0.659585,
+        "median_dice": 0.697019,
+        "std_dice": 0.099206,
+        "mean_iou": 0.500002,
+        "dice_percentage": 65.9585
+      },
+      "valid_negative": {
+        "num_evaluated": 44,
+        "mean_dice": 1.0,
+        "median_dice": 1.0,
+        "std_dice": 0.0,
+        "mean_iou": 1.0,
+        "dice_percentage": 100.0
+      }
+    },
+    "Support Devices": {
+      "all": {
+        "num_evaluated": 47,
+        "mean_dice": 0.689948,
+        "median_dice": 0.736709,
+        "std_dice": 0.329525,
+        "mean_iou": 0.619666,
+        "dice_percentage": 68.9948
+      },
+      "valid_positive": {
+        "num_evaluated": 26,
+        "mean_dice": 0.439521,
+        "median_dice": 0.427542,
+        "std_dice": 0.236501,
+        "mean_iou": 0.312472,
+        "dice_percentage": 43.9521
+      },
+      "valid_negative": {
+        "num_evaluated": 21,
+        "mean_dice": 1.0,
+        "median_dice": 1.0,
+        "std_dice": 0.0,
+        "mean_iou": 1.0,
+        "dice_percentage": 100.0
+      }
+    }
+  },
+  "pathologies": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Enlarged Cardiomediastinum",
+    "Lung Lesion",
+    "Airspace Opacity",
+    "Pleural Effusion",
+    "Pneumothorax",
+    "Support Devices"
+  ],
+  "aggregate_rows": 33
+}

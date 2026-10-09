@@ -1,0 +1,23 @@
+model,protocol,comparison,scope,pathology,metric,n,n_bootstrap,seed,mean_paired_improvement,percentile_2_5,percentile_97_5,ci_95,ci_includes_zero
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,overall,,dice,1534,5000,42,0.096141,0.090745,0.101624,"[0.090745, 0.101624]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Atelectasis,dice,177,5000,42,0.140806,0.123539,0.158231,"[0.123539, 0.158231]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Cardiomegaly,dice,175,5000,42,0.092077,0.080973,0.103985,"[0.080973, 0.103985]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Consolidation,dice,35,5000,42,0.100386,0.062277,0.152028,"[0.062277, 0.152028]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Edema,dice,83,5000,42,0.121112,0.101738,0.140887,"[0.101738, 0.140887]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Enlarged Cardiomediastinum,dice,297,5000,42,0.091640,0.082667,0.101115,"[0.082667, 0.101115]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Lung Lesion,dice,14,5000,42,0.044378,0.021718,0.067637,"[0.021718, 0.067637]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Airspace Opacity,dice,309,5000,42,0.130804,0.117772,0.145139,"[0.117772, 0.145139]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Pleural Effusion,dice,120,5000,42,0.075359,0.054861,0.096166,"[0.054861, 0.096166]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Pneumothorax,dice,10,5000,42,0.028417,-0.016293,0.075626,"[-0.016293, 0.075626]",true
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Support Devices,dice,314,5000,42,0.048706,0.038164,0.059692,"[0.038164, 0.059692]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,overall,,dice,1534,5000,42,0.164816,0.157842,0.172124,"[0.157842, 0.172124]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Atelectasis,dice,177,5000,42,0.207638,0.188057,0.228037,"[0.188057, 0.228037]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Cardiomegaly,dice,175,5000,42,0.138423,0.122260,0.155393,"[0.122260, 0.155393]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Consolidation,dice,35,5000,42,0.208361,0.157804,0.262616,"[0.157804, 0.262616]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Edema,dice,83,5000,42,0.212365,0.167979,0.254157,"[0.167979, 0.254157]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Enlarged Cardiomediastinum,dice,297,5000,42,0.128903,0.118719,0.139459,"[0.118719, 0.139459]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Lung Lesion,dice,14,5000,42,0.169447,0.101987,0.235034,"[0.101987, 0.235034]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Airspace Opacity,dice,309,5000,42,0.232738,0.215985,0.250056,"[0.215985, 0.250056]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Pleural Effusion,dice,120,5000,42,0.121020,0.093438,0.149097,"[0.093438, 0.149097]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Pneumothorax,dice,10,5000,42,-0.050117,-0.140526,0.059606,"[-0.140526, 0.059606]",true
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Support Devices,dice,314,5000,42,0.128468,0.113998,0.142931,"[0.113998, 0.142931]",false

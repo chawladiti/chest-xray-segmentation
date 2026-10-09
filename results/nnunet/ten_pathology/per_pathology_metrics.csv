@@ -1,0 +1,11 @@
+pathology,n,mean_dice,mean_iou
+Atelectasis,14,0.339425,0.242808
+Cardiomegaly,17,0.586587,0.450218
+Consolidation,6,0.453141,0.342618
+Edema,10,0.249288,0.169348
+Enlarged Cardiomediastinum,20,0.693408,0.568471
+Lung Lesion,1,0.0,0.0
+Airspace Opacity,27,0.319164,0.240543
+Pleural Effusion,13,0.143054,0.110799
+Pneumothorax,3,0.0,0.0
+Support Devices,26,0.030724,0.016604

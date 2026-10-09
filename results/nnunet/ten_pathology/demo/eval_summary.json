@@ -1,0 +1,69 @@
+{
+  "mode": "demo",
+  "representation": "nnunet_v2_overlapping_regions_bitmask",
+  "n_channels": 10,
+  "pathologies": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Enlarged Cardiomediastinum",
+    "Lung Lesion",
+    "Airspace Opacity",
+    "Pleural Effusion",
+    "Pneumothorax",
+    "Support Devices"
+  ],
+  "n_scored_positive_pairs": 10,
+  "mean_dice": 0.0,
+  "mean_iou": 0.0,
+  "per_pathology": [
+    {
+      "pathology": "Atelectasis",
+      "n": 2,
+      "mean_dice": 0.0,
+      "mean_iou": 0.0
+    },
+    {
+      "pathology": "Cardiomegaly",
+      "n": 1,
+      "mean_dice": 0.0,
+      "mean_iou": 0.0
+    },
+    {
+      "pathology": "Enlarged Cardiomediastinum",
+      "n": 2,
+      "mean_dice": 0.0,
+      "mean_iou": 0.0
+    },
+    {
+      "pathology": "Lung Lesion",
+      "n": 1,
+      "mean_dice": 0.0,
+      "mean_iou": 0.0
+    },
+    {
+      "pathology": "Airspace Opacity",
+      "n": 1,
+      "mean_dice": 0.0,
+      "mean_iou": 0.0
+    },
+    {
+      "pathology": "Pleural Effusion",
+      "n": 1,
+      "mean_dice": 0.0,
+      "mean_iou": 0.0
+    },
+    {
+      "pathology": "Support Devices",
+      "n": 2,
+      "mean_dice": 0.0,
+      "mean_iou": 0.0
+    }
+  ],
+  "ignore_pairs_excluded": 1,
+  "evaluator": "evaluation.dice.dice_coefficient + evaluation.iou.iou_score + evaluation.metrics.evaluate_pair",
+  "collapsed_multiclass_map_scored": false,
+  "official_test_used": false,
+  "prediction_grid": "nnU-Net 512 region probabilities, nearest-neighbor resized to the original GT mask before Dice/IoU"
+}

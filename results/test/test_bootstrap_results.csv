@@ -1,0 +1,111 @@
+model,training_type,protocol,scope,pathology,metric,n,n_bootstrap,seed,observed_mean,percentile_2_5,percentile_97_5,ci_95,ci_includes_zero
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,overall,,dice,1534,5000,42,0.309919,0.293625,0.326164,"[0.293625, 0.326164]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,overall,,iou,1534,5000,42,0.234052,0.220892,0.247163,"[0.220892, 0.247163]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Atelectasis,dice,177,5000,42,0.301772,0.259777,0.345711,"[0.259777, 0.345711]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Atelectasis,iou,177,5000,42,0.214638,0.182982,0.248118,"[0.182982, 0.248118]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Cardiomegaly,dice,175,5000,42,0.492741,0.443563,0.539803,"[0.443563, 0.539803]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Cardiomegaly,iou,175,5000,42,0.384732,0.344271,0.424651,"[0.344271, 0.424651]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Consolidation,dice,35,5000,42,0.369718,0.268758,0.466782,"[0.268758, 0.466782]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Consolidation,iou,35,5000,42,0.270458,0.192286,0.347320,"[0.192286, 0.347320]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Edema,dice,83,5000,42,0.324230,0.269654,0.379524,"[0.269654, 0.379524]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Edema,iou,83,5000,42,0.221076,0.181112,0.261227,"[0.181112, 0.261227]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Enlarged Cardiomediastinum,dice,297,5000,42,0.546246,0.508123,0.582954,"[0.508123, 0.582954]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Enlarged Cardiomediastinum,iou,297,5000,42,0.440960,0.408515,0.472682,"[0.408515, 0.472682]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Lung Lesion,dice,14,5000,42,0.000000,0.000000,0.000000,"[0.000000, 0.000000]",true
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Lung Lesion,iou,14,5000,42,0.000000,0.000000,0.000000,"[0.000000, 0.000000]",true
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Airspace Opacity,dice,309,5000,42,0.350021,0.315523,0.382960,"[0.315523, 0.382960]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Airspace Opacity,iou,309,5000,42,0.255498,0.229239,0.281169,"[0.229239, 0.281169]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Pleural Effusion,dice,120,5000,42,0.133524,0.095923,0.174764,"[0.095923, 0.174764]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Pleural Effusion,iou,120,5000,42,0.089534,0.062261,0.119271,"[0.062261, 0.119271]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Pneumothorax,dice,10,5000,42,0.000000,0.000000,0.000000,"[0.000000, 0.000000]",true
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Pneumothorax,iou,10,5000,42,0.000000,0.000000,0.000000,"[0.000000, 0.000000]",true
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Support Devices,dice,314,5000,42,0.030275,0.023237,0.037926,"[0.023237, 0.037926]",false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,pathology,Support Devices,iou,314,5000,42,0.016699,0.012697,0.021053,"[0.012697, 0.021053]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,overall,,dice,1534,5000,42,0.645995,0.635310,0.656836,"[0.635310, 0.656836]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,overall,,iou,1534,5000,42,0.511932,0.501001,0.523050,"[0.501001, 0.523050]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Atelectasis,dice,177,5000,42,0.651260,0.625607,0.676855,"[0.625607, 0.676855]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Atelectasis,iou,177,5000,42,0.506946,0.479791,0.533903,"[0.479791, 0.533903]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Cardiomegaly,dice,175,5000,42,0.822112,0.808186,0.834957,"[0.808186, 0.834957]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Cardiomegaly,iou,175,5000,42,0.706282,0.689122,0.722371,"[0.689122, 0.722371]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Consolidation,dice,35,5000,42,0.694043,0.637384,0.742854,"[0.637384, 0.742854]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Consolidation,iou,35,5000,42,0.552081,0.495411,0.605616,"[0.495411, 0.605616]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Edema,dice,83,5000,42,0.652455,0.624097,0.679052,"[0.624097, 0.679052]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Edema,iou,83,5000,42,0.497277,0.466914,0.526563,"[0.466914, 0.526563]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Enlarged Cardiomediastinum,dice,297,5000,42,0.812145,0.801372,0.821843,"[0.801372, 0.821843]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Enlarged Cardiomediastinum,iou,297,5000,42,0.691949,0.679172,0.704363,"[0.679172, 0.704363]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Lung Lesion,dice,14,5000,42,0.580246,0.405497,0.739485,"[0.405497, 0.739485]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Lung Lesion,iou,14,5000,42,0.474490,0.318895,0.618005,"[0.318895, 0.618005]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Airspace Opacity,dice,309,5000,42,0.658768,0.638590,0.678023,"[0.638590, 0.678023]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Airspace Opacity,iou,309,5000,42,0.514890,0.493184,0.535484,"[0.493184, 0.535484]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Pleural Effusion,dice,120,5000,42,0.510423,0.462403,0.556491,"[0.462403, 0.556491]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Pleural Effusion,iou,120,5000,42,0.382429,0.339914,0.422775,"[0.339914, 0.422775]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Pneumothorax,dice,10,5000,42,0.568506,0.434234,0.710692,"[0.434234, 0.710692]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Pneumothorax,iou,10,5000,42,0.435605,0.290801,0.597608,"[0.290801, 0.597608]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Support Devices,dice,314,5000,42,0.425297,0.406631,0.444543,"[0.406631, 0.444543]",false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Support Devices,iou,314,5000,42,0.286236,0.270287,0.303151,"[0.270287, 0.303151]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,overall,,dice,1534,5000,42,0.742136,0.731198,0.752546,"[0.731198, 0.752546]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,overall,,iou,1534,5000,42,0.630198,0.618193,0.641927,"[0.618193, 0.641927]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Atelectasis,dice,177,5000,42,0.792066,0.773357,0.809620,"[0.773357, 0.809620]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Atelectasis,iou,177,5000,42,0.671274,0.648091,0.693582,"[0.648091, 0.693582]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Cardiomegaly,dice,175,5000,42,0.914189,0.908530,0.919615,"[0.908530, 0.919615]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Cardiomegaly,iou,175,5000,42,0.844012,0.834971,0.852822,"[0.834971, 0.852822]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Consolidation,dice,35,5000,42,0.794429,0.747278,0.836340,"[0.747278, 0.836340]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Consolidation,iou,35,5000,42,0.676805,0.620498,0.728116,"[0.620498, 0.728116]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Edema,dice,83,5000,42,0.773566,0.752600,0.792992,"[0.752600, 0.792992]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Edema,iou,83,5000,42,0.639488,0.613129,0.664412,"[0.613129, 0.664412]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Enlarged Cardiomediastinum,dice,297,5000,42,0.903786,0.899161,0.908293,"[0.899161, 0.908293]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Enlarged Cardiomediastinum,iou,297,5000,42,0.827007,0.819576,0.834177,"[0.819576, 0.834177]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Lung Lesion,dice,14,5000,42,0.624624,0.445097,0.785593,"[0.445097, 0.785593]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Lung Lesion,iou,14,5000,42,0.528599,0.359702,0.687255,"[0.359702, 0.687255]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Airspace Opacity,dice,309,5000,42,0.789571,0.775070,0.803486,"[0.775070, 0.803486]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Airspace Opacity,iou,309,5000,42,0.669173,0.651194,0.686682,"[0.651194, 0.686682]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Pleural Effusion,dice,120,5000,42,0.585782,0.541233,0.630203,"[0.541233, 0.630203]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Pleural Effusion,iou,120,5000,42,0.456172,0.412835,0.498901,"[0.412835, 0.498901]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Pneumothorax,dice,10,5000,42,0.596923,0.481327,0.725983,"[0.481327, 0.725983]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Pneumothorax,iou,10,5000,42,0.459064,0.325084,0.616031,"[0.325084, 0.616031]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Support Devices,dice,314,5000,42,0.474003,0.453094,0.494820,"[0.453094, 0.494820]",false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Support Devices,iou,314,5000,42,0.332207,0.312825,0.351635,"[0.312825, 0.351635]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,overall,,dice,1534,5000,42,0.607481,0.596912,0.617513,"[0.596912, 0.617513]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,overall,,iou,1534,5000,42,0.466588,0.455963,0.476630,"[0.455963, 0.476630]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Atelectasis,dice,177,5000,42,0.613144,0.590275,0.635070,"[0.590275, 0.635070]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Atelectasis,iou,177,5000,42,0.458910,0.435636,0.481769,"[0.435636, 0.481769]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Cardiomegaly,dice,175,5000,42,0.781990,0.765000,0.797715,"[0.765000, 0.797715]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Cardiomegaly,iou,175,5000,42,0.654037,0.634209,0.672835,"[0.634209, 0.672835]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Consolidation,dice,35,5000,42,0.605262,0.547426,0.658193,"[0.547426, 0.658193]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Consolidation,iou,35,5000,42,0.454701,0.399276,0.507289,"[0.399276, 0.507289]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Edema,dice,83,5000,42,0.566047,0.530534,0.601327,"[0.530534, 0.601327]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Edema,iou,83,5000,42,0.413560,0.378375,0.449361,"[0.378375, 0.449361]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Enlarged Cardiomediastinum,dice,297,5000,42,0.785483,0.774432,0.795631,"[0.774432, 0.795631]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Enlarged Cardiomediastinum,iou,297,5000,42,0.655687,0.642242,0.668270,"[0.642242, 0.668270]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Lung Lesion,dice,14,5000,42,0.470683,0.329604,0.600693,"[0.329604, 0.600693]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Lung Lesion,iou,14,5000,42,0.343008,0.232249,0.448764,"[0.232249, 0.448764]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Airspace Opacity,dice,309,5000,42,0.584536,0.565513,0.602250,"[0.565513, 0.602250]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Airspace Opacity,iou,309,5000,42,0.431290,0.412738,0.448989,"[0.412738, 0.448989]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Pleural Effusion,dice,120,5000,42,0.497724,0.455132,0.539789,"[0.455132, 0.539789]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Pleural Effusion,iou,120,5000,42,0.363584,0.325164,0.401614,"[0.325164, 0.401614]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Pneumothorax,dice,10,5000,42,0.644806,0.539965,0.749137,"[0.539965, 0.749137]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Pneumothorax,iou,10,5000,42,0.499853,0.383367,0.626322,"[0.383367, 0.626322]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Support Devices,dice,314,5000,42,0.419301,0.400011,0.438162,"[0.400011, 0.438162]",false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,pathology,Support Devices,iou,314,5000,42,0.281478,0.264587,0.297994,"[0.264587, 0.297994]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,overall,,dice,1534,5000,42,0.772297,0.762626,0.781434,"[0.762626, 0.781434]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,overall,,iou,1534,5000,42,0.663990,0.652807,0.674897,"[0.652807, 0.674897]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Atelectasis,dice,177,5000,42,0.820781,0.803594,0.836557,"[0.803594, 0.836557]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Atelectasis,iou,177,5000,42,0.709362,0.687773,0.729807,"[0.687773, 0.729807]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Cardiomegaly,dice,175,5000,42,0.920412,0.913045,0.926902,"[0.913045, 0.926902]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Cardiomegaly,iou,175,5000,42,0.855705,0.844667,0.865827,"[0.844667, 0.865827]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Consolidation,dice,35,5000,42,0.813624,0.772072,0.851977,"[0.772072, 0.851977]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Consolidation,iou,35,5000,42,0.701807,0.648501,0.752082,"[0.648501, 0.752082]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Edema,dice,83,5000,42,0.778412,0.750225,0.803809,"[0.750225, 0.803809]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Edema,iou,83,5000,42,0.651906,0.620415,0.681623,"[0.620415, 0.681623]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Enlarged Cardiomediastinum,dice,297,5000,42,0.914386,0.907841,0.920463,"[0.907841, 0.920463]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Enlarged Cardiomediastinum,iou,297,5000,42,0.846686,0.836916,0.855797,"[0.836916, 0.855797]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Lung Lesion,dice,14,5000,42,0.640130,0.448366,0.815616,"[0.448366, 0.815616]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Lung Lesion,iou,14,5000,42,0.559586,0.376318,0.728141,"[0.376318, 0.728141]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Airspace Opacity,dice,309,5000,42,0.817274,0.804283,0.829730,"[0.804283, 0.829730]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Airspace Opacity,iou,309,5000,42,0.705379,0.688626,0.721373,"[0.688626, 0.721373]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Pleural Effusion,dice,120,5000,42,0.618744,0.578488,0.660122,"[0.578488, 0.660122]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Pleural Effusion,iou,120,5000,42,0.486606,0.445983,0.528633,"[0.445983, 0.528633]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Pneumothorax,dice,10,5000,42,0.594689,0.514253,0.680601,"[0.514253, 0.680601]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Pneumothorax,iou,10,5000,42,0.436513,0.354862,0.528325,"[0.354862, 0.528325]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Support Devices,dice,314,5000,42,0.547769,0.529099,0.566471,"[0.529099, 0.566471]",false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,pathology,Support Devices,iou,314,5000,42,0.396699,0.377930,0.415718,"[0.377930, 0.415718]",false

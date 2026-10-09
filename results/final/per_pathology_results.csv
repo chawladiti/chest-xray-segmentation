@@ -1,0 +1,51 @@
+model,training_type,protocol,pathology,n,mean_dice,median_dice,std_dice,mean_iou,low_sample
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,Atelectasis,14,0.339425,0.291938,0.294056,0.242808,false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,Cardiomegaly,17,0.586587,0.615778,0.249760,0.450218,false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,Consolidation,6,0.453141,0.426002,0.320166,0.342618,true
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,Edema,10,0.249288,0.175360,0.269447,0.169348,false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,Enlarged Cardiomediastinum,20,0.693408,0.754123,0.242021,0.568471,false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,Lung Lesion,1,0.000000,0.000000,,0.000000,true
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,Airspace Opacity,27,0.319164,0.247692,0.329847,0.240543,false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,Pleural Effusion,13,0.143054,0.000000,0.286708,0.110799,false
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,Pneumothorax,3,0.000000,0.000000,0.000000,0.000000,true
+nnU-Net v2,supervised_10_pathology,unprompted supervised segmentation,Support Devices,26,0.030724,0.000000,0.061321,0.016604,false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,Atelectasis,14,0.659014,0.660475,0.164268,0.512412,false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,Cardiomegaly,17,0.828955,0.840901,0.059562,0.711943,false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,Consolidation,6,0.792093,0.796468,0.088889,0.663266,true
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,Edema,10,0.678590,0.698892,0.092951,0.519908,false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,Enlarged Cardiomediastinum,20,0.812675,0.808072,0.054294,0.687860,false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,Lung Lesion,1,0.799485,0.799485,,0.665951,true
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,Airspace Opacity,27,0.714248,0.756581,0.158031,0.577187,false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,Pleural Effusion,13,0.476273,0.584051,0.297713,0.357702,false
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,Pneumothorax,3,0.659585,0.697019,0.121502,0.500002,true
+SAM 2.1 Hiera Tiny,oracle_prompted_pretrained,oracle GT-box prompted,Support Devices,26,0.439521,0.427542,0.241185,0.312472,false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,Atelectasis,14,0.834255,0.851439,0.082170,0.723182,false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,Cardiomegaly,17,0.915407,0.917691,0.025634,0.844964,false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,Consolidation,6,0.866240,0.876213,0.062806,0.768531,true
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,Edema,10,0.801888,0.809378,0.050159,0.671925,false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,Enlarged Cardiomediastinum,20,0.899168,0.911845,0.040679,0.819100,false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,Lung Lesion,1,0.874560,0.874560,,0.777083,true
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,Airspace Opacity,27,0.815749,0.860533,0.140982,0.708141,false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,Pleural Effusion,13,0.563742,0.702196,0.316033,0.448635,false
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,Pneumothorax,3,0.743275,0.772783,0.131290,0.602750,true
+SAM 2.1 Hiera Tiny,fine_tuned_oracle_prompted,oracle GT-box prompted,Support Devices,26,0.518504,0.469408,0.244237,0.386493,false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,Atelectasis,14,0.649811,0.674189,0.121899,0.492194,false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,Cardiomegaly,17,0.807761,0.810629,0.056592,0.680926,false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,Consolidation,6,0.736650,0.724299,0.087718,0.589971,true
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,Edema,10,0.584408,0.603093,0.146854,0.426100,false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,Enlarged Cardiomediastinum,20,0.777229,0.778592,0.069028,0.640586,false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,Lung Lesion,1,0.653418,0.653418,,0.485242,true
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,Airspace Opacity,27,0.640123,0.673352,0.161229,0.488166,false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,Pleural Effusion,13,0.426340,0.500905,0.283684,0.308952,false
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,Pneumothorax,3,0.710694,0.690983,0.057337,0.553312,true
+MedSAM ViT-B,oracle_prompted_pretrained,oracle GT-box prompted,Support Devices,26,0.457326,0.390010,0.227099,0.324783,false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,Atelectasis,14,0.848796,0.875895,0.089200,0.746354,false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,Cardiomegaly,17,0.935441,0.944041,0.021377,0.879419,false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,Consolidation,6,0.865131,0.853890,0.063353,0.766946,true
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,Edema,10,0.815145,0.806643,0.061994,0.692328,false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,Enlarged Cardiomediastinum,20,0.926667,0.927555,0.029189,0.864640,false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,Lung Lesion,1,0.829367,0.829367,,0.708478,true
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,Airspace Opacity,27,0.824079,0.885693,0.161055,0.724671,false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,Pleural Effusion,13,0.598117,0.705306,0.320598,0.488738,false
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,Pneumothorax,3,0.742270,0.671514,0.131041,0.602501,true
+MedSAM ViT-B,fine_tuned_oracle_prompted,oracle GT-box prompted,Support Devices,26,0.584033,0.614845,0.203020,0.439894,false

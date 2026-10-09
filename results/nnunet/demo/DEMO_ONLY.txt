@@ -1,0 +1,3 @@
+DEMO / debugging results only.
+mean Dice 0.0254 and mean IoU 0.0134 are NOT scientific model performance.
+Do not include these files in the final model comparison.

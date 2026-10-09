@@ -1,0 +1,92 @@
+{
+  "mode": "full",
+  "representation": "nnunet_v2_overlapping_regions_bitmask",
+  "n_channels": 10,
+  "pathologies": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Consolidation",
+    "Edema",
+    "Enlarged Cardiomediastinum",
+    "Lung Lesion",
+    "Airspace Opacity",
+    "Pleural Effusion",
+    "Pneumothorax",
+    "Support Devices"
+  ],
+  "n_scored_positive_pairs": 137,
+  "mean_dice": 0.32905,
+  "mean_iou": 0.252105,
+  "per_pathology": [
+    {
+      "pathology": "Atelectasis",
+      "n": 14,
+      "mean_dice": 0.339425,
+      "mean_iou": 0.242808
+    },
+    {
+      "pathology": "Cardiomegaly",
+      "n": 17,
+      "mean_dice": 0.586587,
+      "mean_iou": 0.450218
+    },
+    {
+      "pathology": "Consolidation",
+      "n": 6,
+      "mean_dice": 0.453141,
+      "mean_iou": 0.342618
+    },
+    {
+      "pathology": "Edema",
+      "n": 10,
+      "mean_dice": 0.249288,
+      "mean_iou": 0.169348
+    },
+    {
+      "pathology": "Enlarged Cardiomediastinum",
+      "n": 20,
+      "mean_dice": 0.693408,
+      "mean_iou": 0.568471
+    },
+    {
+      "pathology": "Lung Lesion",
+      "n": 1,
+      "mean_dice": 0.0,
+      "mean_iou": 0.0
+    },
+    {
+      "pathology": "Airspace Opacity",
+      "n": 27,
+      "mean_dice": 0.319164,
+      "mean_iou": 0.240543
+    },
+    {
+      "pathology": "Pleural Effusion",
+      "n": 13,
+      "mean_dice": 0.143054,
+      "mean_iou": 0.110799
+    },
+    {
+      "pathology": "Pneumothorax",
+      "n": 3,
+      "mean_dice": 0.0,
+      "mean_iou": 0.0
+    },
+    {
+      "pathology": "Support Devices",
+      "n": 26,
+      "mean_dice": 0.030724,
+      "mean_iou": 0.016604
+    }
+  ],
+  "ignore_pairs_excluded": 1,
+  "evaluator": "evaluation.dice.dice_coefficient + evaluation.iou.iou_score + evaluation.metrics.evaluate_pair",
+  "collapsed_multiclass_map_scored": false,
+  "official_test_used": false,
+  "prediction_grid": "nnU-Net 512 region probabilities, nearest-neighbor resized to the original GT mask before Dice/IoU",
+  "population_matches_manifest": true,
+  "population_matches_load_positive_pairs": true,
+  "harmonized_positive_pairs": 137,
+  "matches_sam2_pretrained_valid_positive": true,
+  "matches_medsam_pretrained_valid_positive": true
+}

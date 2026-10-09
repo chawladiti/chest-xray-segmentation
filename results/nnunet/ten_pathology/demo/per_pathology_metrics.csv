@@ -1,0 +1,8 @@
+pathology,n,mean_dice,mean_iou
+Atelectasis,2,0.0,0.0
+Cardiomegaly,1,0.0,0.0
+Enlarged Cardiomediastinum,2,0.0,0.0
+Lung Lesion,1,0.0,0.0
+Airspace Opacity,1,0.0,0.0
+Pleural Effusion,1,0.0,0.0
+Support Devices,2,0.0,0.0

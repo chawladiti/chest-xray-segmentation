@@ -1,0 +1,17 @@
+model,protocol,comparison,scope,pathology,metric,n,n_bootstrap,seed,mean_paired_improvement,percentile_2_5,percentile_97_5,ci_95,ci_includes_zero
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,overall,,dice,137,5000,42,0.099183,0.082241,0.117702,"[0.082241, 0.117702]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Atelectasis,dice,14,5000,42,0.175241,0.120858,0.231716,"[0.120858, 0.231716]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Cardiomegaly,dice,17,5000,42,0.086452,0.066425,0.106433,"[0.066425, 0.106433]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Edema,dice,10,5000,42,0.123298,0.065514,0.191068,"[0.065514, 0.191068]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Enlarged Cardiomediastinum,dice,20,5000,42,0.086492,0.060156,0.110664,"[0.060156, 0.110664]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Airspace Opacity,dice,27,5000,42,0.101501,0.061391,0.144591,"[0.061391, 0.144591]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Pleural Effusion,dice,13,5000,42,0.087469,0.041033,0.159029,"[0.041033, 0.159029]",false
+SAM 2.1 Hiera Tiny,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Support Devices,dice,26,5000,42,0.078982,0.035573,0.128563,"[0.035573, 0.128563]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,overall,,dice,137,5000,42,0.159039,0.136723,0.181641,"[0.136723, 0.181641]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Atelectasis,dice,14,5000,42,0.198985,0.116868,0.284951,"[0.116868, 0.284951]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Cardiomegaly,dice,17,5000,42,0.127680,0.100396,0.158386,"[0.100396, 0.158386]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Edema,dice,10,5000,42,0.230737,0.146608,0.310527,"[0.146608, 0.310527]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Enlarged Cardiomediastinum,dice,20,5000,42,0.149438,0.121495,0.180258,"[0.121495, 0.180258]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Airspace Opacity,dice,27,5000,42,0.183956,0.146483,0.222357,"[0.146483, 0.222357]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Pleural Effusion,dice,13,5000,42,0.171777,0.055006,0.291079,"[0.055006, 0.291079]",false
+MedSAM ViT-B,oracle GT-box prompted,fine_tuned_minus_pretrained,pathology,Support Devices,dice,26,5000,42,0.126707,0.067332,0.191220,"[0.067332, 0.191220]",false

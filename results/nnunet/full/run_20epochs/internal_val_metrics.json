@@ -1,0 +1,333 @@
+{
+  "summary": {
+    "num_cases": 46,
+    "num_missing": 0,
+    "mean_dice": 0.46188,
+    "mean_dice_pct": 46.188,
+    "mean_iou": 0.41435
+  },
+  "per_case": [
+    {
+      "case": "patient64542_study1_view1_frontal",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64542_study1_view2_lateral",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64547_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 7021,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64547_study1_view2_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 607,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64547_study1_view3_lateral",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 6440,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64548_study1_view1_frontal",
+      "dice": 0.681682,
+      "iou": 0.517085,
+      "gt_pos": 25731,
+      "pred_pos": 21819
+    },
+    {
+      "case": "patient64549_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 0,
+      "pred_pos": 2887
+    },
+    {
+      "case": "patient64563_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 6159,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64564_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 7504,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64567_study1_view1_frontal",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64567_study1_view2_lateral",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64569_study1_view1_frontal",
+      "dice": 0.264014,
+      "iou": 0.152083,
+      "gt_pos": 21508,
+      "pred_pos": 3271
+    },
+    {
+      "case": "patient64576_study1_view1_frontal",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64580_study1_view1_frontal",
+      "dice": 0.621758,
+      "iou": 0.451124,
+      "gt_pos": 40336,
+      "pred_pos": 24937
+    },
+    {
+      "case": "patient64581_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 0,
+      "pred_pos": 9929
+    },
+    {
+      "case": "patient64581_study1_view2_frontal",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64581_study1_view3_lateral",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64591_study1_view1_frontal",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64596_study1_view1_frontal",
+      "dice": 0.900102,
+      "iou": 0.818351,
+      "gt_pos": 18542,
+      "pred_pos": 19587
+    },
+    {
+      "case": "patient64597_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 0,
+      "pred_pos": 1761
+    },
+    {
+      "case": "patient64597_study1_view2_lateral",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64598_study1_view1_frontal",
+      "dice": 0.401474,
+      "iou": 0.251152,
+      "gt_pos": 27997,
+      "pred_pos": 8105
+    },
+    {
+      "case": "patient64600_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 10528,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64600_study1_view2_lateral",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 16387,
+      "pred_pos": 907
+    },
+    {
+      "case": "patient64603_study1_view1_frontal",
+      "dice": 0.473227,
+      "iou": 0.309952,
+      "gt_pos": 28502,
+      "pred_pos": 13816
+    },
+    {
+      "case": "patient64611_study1_view1_frontal",
+      "dice": 0.50538,
+      "iou": 0.338132,
+      "gt_pos": 14539,
+      "pred_pos": 5537
+    },
+    {
+      "case": "patient64628_study1_view1_frontal",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64648_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 5153,
+      "pred_pos": 11348
+    },
+    {
+      "case": "patient64649_study1_view1_frontal",
+      "dice": 0.341107,
+      "iou": 0.205623,
+      "gt_pos": 20250,
+      "pred_pos": 7964
+    },
+    {
+      "case": "patient64655_study1_view1_frontal",
+      "dice": 0.811799,
+      "iou": 0.683217,
+      "gt_pos": 25366,
+      "pred_pos": 21010
+    },
+    {
+      "case": "patient64670_study1_view1_frontal",
+      "dice": 0.046106,
+      "iou": 0.023597,
+      "gt_pos": 25978,
+      "pred_pos": 613
+    },
+    {
+      "case": "patient64680_study1_view1_frontal",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64684_study1_view1_frontal",
+      "dice": 0.835744,
+      "iou": 0.717836,
+      "gt_pos": 20989,
+      "pred_pos": 19241
+    },
+    {
+      "case": "patient64691_study1_view1_frontal",
+      "dice": 0.206747,
+      "iou": 0.115291,
+      "gt_pos": 11840,
+      "pred_pos": 16678
+    },
+    {
+      "case": "patient64692_study1_view1_frontal",
+      "dice": 0.067221,
+      "iou": 0.03478,
+      "gt_pos": 21432,
+      "pred_pos": 28106
+    },
+    {
+      "case": "patient64695_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 0,
+      "pred_pos": 5686
+    },
+    {
+      "case": "patient64704_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 19785,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64707_study1_view1_frontal",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64709_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 0,
+      "pred_pos": 623
+    },
+    {
+      "case": "patient64714_study1_view1_frontal",
+      "dice": 0.669058,
+      "iou": 0.502695,
+      "gt_pos": 32502,
+      "pred_pos": 20459
+    },
+    {
+      "case": "patient64722_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 18414,
+      "pred_pos": 4817
+    },
+    {
+      "case": "patient64726_study1_view1_frontal",
+      "dice": 0.0,
+      "iou": 0.0,
+      "gt_pos": 0,
+      "pred_pos": 7194
+    },
+    {
+      "case": "patient64729_study1_view1_frontal",
+      "dice": 0.391074,
+      "iou": 0.243065,
+      "gt_pos": 18476,
+      "pred_pos": 17599
+    },
+    {
+      "case": "patient64730_study1_view1_frontal",
+      "dice": 1.0,
+      "iou": 1.0,
+      "gt_pos": 0,
+      "pred_pos": 0
+    },
+    {
+      "case": "patient64732_study1_view1_frontal",
+      "dice": 0.469449,
+      "iou": 0.306719,
+      "gt_pos": 9804,
+      "pred_pos": 11161
+    },
+    {
+      "case": "patient64738_study1_view1_frontal",
+      "dice": 0.560529,
+      "iou": 0.3894,
+      "gt_pos": 14821,
+      "pred_pos": 7540
+    }
+  ]
+}
