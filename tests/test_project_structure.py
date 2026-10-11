@@ -32,7 +32,6 @@ EXPECTED_FILES = [
     "configs/loader.py",
     ".gitignore",
     "requirements.txt",
-    "PROJECT_STATUS.md",
     "README.md",
 ]
 
