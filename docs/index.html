@@ -152,12 +152,24 @@
       margin: 10px auto 2px;
       background: #fff;
     }
-    .hero-figure video {
+    .hero-figure video,
+    .hero-figure .hero-fallback {
       display: block;
       width: 100%;
       height: auto;
+      aspect-ratio: 1784 / 1604;
       object-fit: contain;
-      background: #fff;
+      background: #fff url("figures/hero_summary_poster.jpg") center / contain no-repeat;
+    }
+    .hero-figure .hero-fallback {
+      display: none;
+      cursor: default;
+    }
+    .hero-figure.is-fallback video {
+      display: none;
+    }
+    .hero-figure.is-fallback .hero-fallback {
+      display: block;
     }
     .hero-figure figcaption {
       padding: 8px 10px 10px;
@@ -314,10 +326,11 @@
     </header>
 
     <figure class="hero-figure">
-      <video id="hero" width="1784" height="1604" autoplay muted loop playsinline preload="auto" poster="figures/hero_summary_poster.jpg?v=boldlabels" aria-label="Representative internal-validation Pleural Effusion film: chest X-ray, radiologist mask, then nnU-Net, SAM 2.1, and MedSAM.">
-        <source src="figures/hero_summary.webm?v=sam21" type="video/webm" />
-        <source src="figures/hero_summary.mp4?v=sam21" type="video/mp4" />
+      <video id="hero" autoplay muted loop playsinline preload="metadata" poster="figures/hero_summary_poster.jpg" aria-label="Representative internal-validation Pleural Effusion film: chest X-ray, radiologist mask, then nnU-Net, SAM 2.1, and MedSAM.">
+        <source src="figures/hero_summary.mp4" type="video/mp4" />
+        <source src="figures/hero_summary.webm" type="video/webm" />
       </video>
+      <img class="hero-fallback" alt="Chest X-ray segmentation comparison" width="1784" height="1604" />
       <figcaption>Pleural Effusion example from internal validation.<br>White = ground truth; Navy = model prediction.</figcaption>
     </figure>
 
@@ -484,7 +497,7 @@
   <script>
     const box = document.getElementById("lightbox");
     const shot = box.querySelector("img");
-    document.querySelectorAll("figure img").forEach((img) => {
+    document.querySelectorAll("figure img:not(.hero-fallback)").forEach((img) => {
       img.addEventListener("click", () => {
         shot.src = img.src;
         shot.alt = img.alt;
@@ -532,11 +545,32 @@
     });
 
     const hero = document.getElementById("hero");
+    const heroFigure = hero.closest(".hero-figure");
+    const heroFallback = heroFigure.querySelector(".hero-fallback");
+    let heroFellBack = false;
     hero.muted = true;
+    hero.playsInline = true;
+    function showHeroGif() {
+      if (heroFellBack) return;
+      heroFellBack = true;
+      heroView.disconnect();
+      hero.pause();
+      heroFallback.addEventListener("load", () => {
+        heroFigure.classList.add("is-fallback");
+      }, { once: true });
+      heroFallback.src = "figures/hero_summary.gif";
+    }
+    hero.addEventListener("error", showHeroGif);
     function setHeroPlaying(on) {
+      if (heroFellBack) return;
       if (on) {
         const pending = hero.play();
-        if (pending) pending.catch(() => {});
+        if (pending) {
+          pending.catch((err) => {
+            if (err && err.name === "AbortError") return;
+            showHeroGif();
+          });
+        }
       } else {
         hero.pause();
       }
