@@ -102,7 +102,7 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 14px;
-      margin: 0 0 2px;
+      margin: 0 0 24px;
     }
     .author {
       font-size: 15.5px;
@@ -126,15 +126,17 @@
     }
     .code-link svg { display: block; width: 14px; height: 14px; }
     .code-link:hover { color: #244560; border-color: #244560; background: var(--surface); }
-    .lede { font-size: 15.5px; line-height: 1.5; color: var(--muted); margin: 22px 0 0; }
-    .badges { display: flex; flex-wrap: wrap; gap: 5px; margin: 8px 0 0; }
+    .lede { font-size: 15.5px; line-height: 1.5; color: var(--muted); margin: 8px 0 0; }
+    .badges { display: flex; flex-wrap: wrap; gap: 5px; margin: 0; }
     .badge {
-      font: 11px/1 Inter, Arial, Helvetica, sans-serif;
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px;
+      font: 500 13px/14px Inter, Arial, Helvetica, sans-serif;
       color: var(--accent);
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 6px;
-      padding: 4px 7px;
     }
     header + figure { margin-top: 14px; }
     header + .hero-figure { margin-top: 8px; }
