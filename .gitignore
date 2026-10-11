@@ -40,6 +40,8 @@ data/splits/**/*.npz
 *.jpeg
 # ...but keep documentation / notebook figures explicitly if needed:
 !docs/**/*.png
+!docs/**/*.jpg
+!docs/**/*.jpeg
 !results/**/*.png
 
 # -----------------------------------------------------------------------------
